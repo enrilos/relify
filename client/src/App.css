@@ -3,19 +3,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.container-main ul {
-  display:  flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container-main li {
-  list-style-type: none;
-  margin: 0 1em;
-}
-
-.container-main a {
-  color: white;
-  text-decoration: none;
-}

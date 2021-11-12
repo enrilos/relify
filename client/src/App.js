@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import './App.css';
 
 function App() {
@@ -19,9 +20,8 @@ function App() {
             <main>
                 <p>Welcome, this is main.</p>
             </main>
-            <footer className="container-footer">
-                <p>&copy; relify is a property of github/enrilos. All rights reserved.</p>
-            </footer>
+
+            <Footer />
         </section>
     );
 }

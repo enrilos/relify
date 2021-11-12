@@ -2,7 +2,23 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 1.6em;
     background-color: #404040;
     color: white;
 }
+
+.container-header ul {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container-header li {
+    list-style-type: none;
+    margin: 0 1em;
+  }
+  
+  .container-header a {
+    color: white;
+    text-decoration: none;
+  }
