@@ -6,7 +6,7 @@ const Stories = () => {
     // const [stories, setStories] = useState([]);
 
     // useEffect(() => {
-
+        // get data with custom storyService.js which in turn uses abstract fetch helper (jsonRequest.js)
     // }, []);
 
     return (
@@ -14,13 +14,13 @@ const Stories = () => {
             <StoryCard
                 key={1} // hardcoded for demo purposes
                 title="First Title"
-                description="Some first desc"
+                content="Some first desc"
                 author="Brandon"
             />
             <StoryCard
                 key={2} // hardcoded for demo purposes
                 title="Second Title http"
-                description="Http vs Https secure tunnel"
+                content="Http vs Https secure tunnel"
                 author="Ron"
             />
         </section>

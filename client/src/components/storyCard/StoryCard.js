@@ -2,13 +2,13 @@ import styles from './StoryCard.module.css';
 
 const StoryCard = ({
     title,
-    description,
+    content,
     author
 }) => {
     return (
         <article className={styles['container-story']}>
             <p>Title: {title}</p>
-            <p>Description: {description}</p>
+            <p>Content: {content}</p>
             <p>Author: {author}</p>
             <p>Like</p>
             <p>Add to Favourites</p>

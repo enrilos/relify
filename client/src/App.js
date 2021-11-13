@@ -7,18 +7,12 @@ import './App.css';
 function App() {
     return (
         <section className="container-main">
+            <Header />
+
             <Routes>
-                {/* <Route exact path="/" component={ } />
-                <Route exact path="/posts" component={ } />
-                <Route exact path="/about" component={ } />
-                <Route exact path="/contact" component={ } />
-                <Route exact path="/login" component={ } />
-                <Route exact path="/register" component={ } /> */}
+                <Route exact path="/" element={<Stories/>} />
             </Routes>
 
-            <Header />
-            
-            <Stories /> {/* render latest 3 stories below intro container*/}
             <Footer />
         </section>
     );
