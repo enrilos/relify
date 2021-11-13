@@ -9,7 +9,9 @@ const Header = () => {
                 <Link to="/" className="container-header-logo-text">relify</Link>
             </section>
             <ul>
-                <li><Link to="/posts">Posts</Link></li>
+                <li><Link to="/stories">Stories</Link></li>
+                <li><Link to="/myStories">My Stories</Link></li>
+                <li><Link to="/myLikes">My Likes</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>

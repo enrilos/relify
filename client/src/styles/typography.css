@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
-.container-header-logo-text {
+.container-header-logo-text,
+.container-footer-logo-text {
     font-family: 'Poppins', sans-serif;
+}
+
+.container-header-logo-text {
     font-size: 3em;
 }

@@ -1,9 +1,10 @@
 import styles from './Footer.module.css'
+import '../../styles/typography.css';
 
 const Footer = () => {
     return (
         <footer className={styles['container-footer']}>
-            <p>&copy; relify is a property of <a href="https://github.com/enrilos">github/enrilos</a>. All rights reserved.</p>
+            <p>&copy; <span className="container-footer-logo-text">relify</span> is a property of <a href="https://github.com/enrilos">github/enrilos</a>. All rights reserved.</p>
         </footer>
     )
 }
