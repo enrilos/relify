@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container-footer {
@@ -16,6 +16,11 @@
 
 .container-footer-logo-text {
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: -webkit-linear-gradient(0deg, #46bff3, #20fac7);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container-footer p a {

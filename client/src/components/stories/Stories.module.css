@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container-stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 1em;
+    font-family: 'Raleway', sans-serif;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-stories > article {
+    margin: 0 1em;
+}

@@ -1,13 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
+import Stories from './components/stories/Stories';
 import Footer from './components/footer/Footer';
 import './App.css';
 
 function App() {
     return (
         <section className="container-main">
-            <Header />
-
             <Routes>
                 {/* <Route exact path="/" component={ } />
                 <Route exact path="/posts" component={ } />
@@ -17,10 +16,9 @@ function App() {
                 <Route exact path="/register" component={ } /> */}
             </Routes>
 
-            <main>
-                <p>Welcome, this is main.</p>
-            </main>
-
+            <Header />
+            
+            <Stories /> {/* render latest 3 stories below intro container*/}
             <Footer />
         </section>
     );

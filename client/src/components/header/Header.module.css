@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container-header {
     display: flex;
     align-items: center;
     background-color: #404040;
+    justify-content: space-evenly;
+    width: 94%;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 6px 2px rgb(0 0 0 / 50%);
 }
 
 .container-header a {
@@ -12,22 +18,27 @@
     color: whitesmoke;
 }
 
-.container-header-logo {
-    margin-left: 3em;
-}
-
 .container-header-logo-text {
     font-family: 'Poppins', sans-serif;
     font-size: 3em;
-}
-
-.container-header > * {
-    flex-grow: 1;
+    font-weight: 200;
+    background: -webkit-linear-gradient(0deg, #46bff3, #20fac7);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container-header ul {
     display:  flex;
     align-items: center;
+}
+
+.container-header > ul:nth-child(2) {
+    justify-content: center;
+}
+
+.container-header > ul:nth-child(3) {
+    justify-content: flex-end;
 }
   
 .container-header li {
