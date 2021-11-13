@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css';
+import '../../styles/typography.css';
 
 const Header = () => {
     return (
         <header className={styles['container-header']}>
-            <Link to="/">relify</Link>
+            <section className={styles['container-header-logo']}>
+                <Link to="/" className="container-header-logo-text">relify</Link>
+            </section>
             <ul>
                 <li><Link to="/posts">Posts</Link></li>
                 <li><Link to="/about">About</Link></li>

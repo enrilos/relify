@@ -1,24 +1,29 @@
 .container-header {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 1.6em;
     background-color: #404040;
     color: white;
 }
 
+.container-header-logo {
+    margin-left: 3em;
+}
+
+.container-header > * {
+    flex-grow: 1;
+}
+
 .container-header ul {
     display:  flex;
-    justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .container-header li {
+.container-header li {
     list-style-type: none;
     margin: 0 1em;
-  }
-  
-  .container-header a {
+}
+
+.container-header a {
     color: white;
     text-decoration: none;
-  }
+}
