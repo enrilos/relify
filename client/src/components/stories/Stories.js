@@ -1,4 +1,5 @@
 // import { useEffect, useState } from 'react';
+import StoryCard from '../storyCard/StoryCard';
 import styles from './Stories.module.css';
 
 const Stories = () => {
@@ -10,20 +11,18 @@ const Stories = () => {
 
     return (
         <section className={styles['container-stories']}>
-            <article>
-                <p>Some cool story here.</p>
-                <p>This is the description</p>
-                <p>Author...</p>
-                <p>Like</p>
-                <p>Add to Favourites</p>
-            </article>
-            <article>
-                <p>Second story.</p>
-                <p>Unicorns</p>
-                <p>Author name...</p>
-                <p>Like</p>
-                <p>Add to Favourites</p>
-            </article>
+            <StoryCard
+                key={1} // hardcoded for demo purposes
+                title="First Title"
+                description="Some first desc"
+                author="Brandon"
+            />
+            <StoryCard
+                key={2} // hardcoded for demo purposes
+                title="Second Title http"
+                description="Http vs Https secure tunnel"
+                author="Ron"
+            />
         </section>
     )
 }
