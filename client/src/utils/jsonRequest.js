@@ -1,4 +1,6 @@
-export async function jsonRequest(url, method, body, skipJsonResult) {
+import authApi from "./authApi.js";
+
+export async function jsonRequest(url, method, body, isAuthorized, skipJsonResult) {
     if (method === undefined) {
         method = 'Get';
     }
@@ -7,6 +9,10 @@ export async function jsonRequest(url, method, body, skipJsonResult) {
 
     if (['post', 'put', 'patch'].includes(method.toLowerCase())) {
         headers['Content-Type'] = 'application/json';
+    }
+
+    if (isAuthorized) {
+        headers['X-Authorization'] = authApi.getAuthToken();
     }
 
     const options = {
