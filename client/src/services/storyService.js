@@ -1,11 +1,13 @@
 import { jsonRequest } from "../utils/jsonRequest";
 
-const baseUrl = "http://localhost:5000/stories";
+const baseUrl = "http://localhost:3030/data/stories";
 
 async function getAll() {
-    return await jsonRequest(baseUrl);
+    return await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc`);
 }
 
-export default {
+const storyService = {
     getAll
 }
+
+export default storyService;
