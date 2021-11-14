@@ -1,12 +1,16 @@
 {
-    "posts": [
+    "stories": [
         {
             "id": 1,
-            "title": "Test title 1"
+            "title": "First Title",
+            "content": "Some first desc",
+            "author": "Brandon"
         },
         {
             "id": 2,
-            "title": "Test title 2"
+            "title": "Second Title http",
+            "content": "Http vs Https secure tunnel",
+            "author": "Ron"
         }
     ]
 }
