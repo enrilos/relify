@@ -1,0 +1,22 @@
+.container-intro {
+    text-align: center;
+    padding: 1em;
+}
+
+.container-stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-story {
+    flex-basis: 32.8%;
+    text-align: center;
+    padding: 10px;
+    background-color: lightskyblue;
+    margin: 2px;
+}
