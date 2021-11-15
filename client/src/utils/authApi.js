@@ -1,6 +1,6 @@
 import { jsonRequest } from "./jsonRequest.js";
 
-const baseUrl = 'http://localhost:3030/users';
+const baseUrl = 'http://localhost:5000/users';
 
 function getAuthToken() {
     return localStorage.getItem('authToken');
