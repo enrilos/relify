@@ -2,21 +2,30 @@ import '../../styles/style.css';
 
 const Login = () => {
     const submitHandler = (e) => {
+        // Dynamically validate input fields data.
+
         e.preventDefault();
 
-        const { title, content } = e.target;
-        console.log(title.value);
-        console.log(content.value);
+        const { email, password } = e.target;
+
+        // Redirect after successful submission.
     }
 
     return (
         <section className="container-auth">
             <form className="container-auth-form" onSubmit={submitHandler}>
-                <label htmlFor="title">Title</label>
-                <input id="title" type="text" name="title" />
-                <label htmlFor="content">Content</label>
-                <input id="content" type="text" name="content" />
-                <input className="container-auth-form-submit" type="submit" value="Submit" />
+                <fieldset>
+                    <legend>Login</legend>
+                    <p>
+                        <label htmlFor="email">Email</label>
+                        <input id="email" type="text" name="email" />
+                    </p>
+                    <p>
+                        <label htmlFor="password">Password</label>
+                        <input id="password" type="password" name="password" />
+                    </p>
+                    <input className="container-auth-form-submit" type="submit" value="Submit" />
+                </fieldset>
             </form>
         </section>
     );

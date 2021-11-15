@@ -11,6 +11,8 @@ function App() {
             <Header />
 
             <Routes>
+                {/* The intro page should only render 3 latest stories. Instead of making a new component only for intro stories, consider how to circumvent that smartly. */}
+                {/* and reuse the same component both in the intro (3 latest stories) and Stories page (all stories) */}
                 <Route exact path="/" element={<Stories />} />
                 <Route exact path="/login" element={<Login />} />
             </Routes>

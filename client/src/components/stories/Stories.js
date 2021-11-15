@@ -9,6 +9,7 @@ const Stories = () => {
 
     useEffect(() => {
         (async () => {
+            // TODO: getLatestThree or getAll depending on intro page or Stories catalogue.
             const response = await storyService.getAll();
             setStories(response);
         })();

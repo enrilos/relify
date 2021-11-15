@@ -46,3 +46,12 @@
 .container-footer p a:hover {
     color: #8eb9ee;
 }
+
+.container-auth {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container-auth-form-submit {
+    font-size: 1.2em;
+    color: white;
+}
