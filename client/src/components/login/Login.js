@@ -15,6 +15,7 @@ const Login = () => {
         <section className="container-auth">
             <form className="container-auth-form" onSubmit={submitHandler}>
                 <fieldset>
+                    {/* TODO: Implement font awesome icons */}
                     <legend>Login</legend>
                     <p>
                         <label htmlFor="email">Email</label>
