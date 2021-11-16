@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import '../../styles/style.css';
 
 const Login = () => {
+    let navigate = useNavigate();
+
     const submitHandler = (e) => {
         // Dynamically validate input fields data.
 
@@ -9,6 +12,7 @@ const Login = () => {
         const { email, password } = e.target;
 
         // Redirect after successful submission.
+        navigate("/");
     }
 
     return (
