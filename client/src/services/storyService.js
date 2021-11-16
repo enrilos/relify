@@ -6,8 +6,13 @@ async function getAll() {
     return await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc`);
 }
 
+async function getLatestThree() {
+    return await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
+}
+
 const storyService = {
-    getAll
+    getAll,
+    getLatestThree
 }
 
 export default storyService;
