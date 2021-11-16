@@ -12,7 +12,6 @@ const Stories = () => {
             const stories = await storyService.getAll();
             setStories(stories);
         })();
-
     }, []);
 
     return (
