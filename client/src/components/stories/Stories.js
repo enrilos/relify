@@ -4,15 +4,12 @@ import storyService from '../../services/storyService';
 import StoryCard from '../storyCard/StoryCard';
 import '../../styles/style.css';
 
-const Stories = ({ getLatest }) => {
+const Stories = () => {
     const [stories, setStories] = useState([]);
 
     useEffect(() => {
         (async () => {
-            // An interesting bug appears.
-            // When going back and forth with between '/' and '/stories', it does not render the new records (all or latest).
-            // Instead, another route must be accessed (like login) in order to refresh and get the new records.
-            const stories = getLatest ? await storyService.getLatestThree() : await storyService.getAll();
+            const stories = await storyService.getAll();
             setStories(stories);
         })();
 
@@ -20,9 +17,6 @@ const Stories = ({ getLatest }) => {
 
     return (
         <article>
-            <section className="container-intro">
-                <h1>Latest stories</h1>
-            </section>
             <section className="container-stories">
                 {stories.map(x =>
                     <StoryCard
