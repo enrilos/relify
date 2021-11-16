@@ -1,8 +1,3 @@
-.container-intro {
-    text-align: center;
-    padding: 1em;
-}
-
 .container-stories {
     display: flex;
     flex-wrap: wrap;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 .container-header a {
     text-decoration: none;
@@ -16,10 +17,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.container-intro > h1 {
-    color: purple;
+.container-home-intro > h1 {
+    color: #ff3686;
+    text-shadow: 2px 1px #505050;
     font-size: 3em;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Prata', serif;
 }
 
 .container-stories {
