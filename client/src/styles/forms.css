@@ -1,7 +1,7 @@
 /* @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css"); */
 
-.container-auth {
-    margin: auto;
+.container-auth-form {
+    padding-top: 3em;
 }
 
 .container-auth-form > fieldset {
@@ -11,12 +11,12 @@
     border: 2px solid #505050;
     border-radius: 4px;
     padding: 1em;
-    width: 20%;
+    width: 25%;
     margin: auto;
 }
 
 .container-auth-form > fieldset > legend {
-    background-color: #ff42a7;
+    background-color: #23ffff;
     padding: 8px 16px;
 }
 
@@ -25,17 +25,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .container-auth-form > fieldset > p > input {
     padding: 1em 2em;
+    width: 100%;
+    margin-top: .6em;
     border: 2px solid #505050;
     border-radius: 4px;
 }
 
 .container-auth-form-submit {
     margin-top: 1em;
-    background-color: #44f2e6;
+    background-color: #23ffff;
+    color: #191919;
     padding: .5em 2.5em;
     border: none; 
     border-radius: 4px;

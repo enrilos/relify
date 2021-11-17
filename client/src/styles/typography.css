@@ -18,7 +18,7 @@
 }
 
 .container-home-intro > h1 {
-    color: #ff36a5;
+    color: whitesmoke;
     text-shadow: 2px 1px #505050;
     font-size: 3em;
     font-family: 'Prata', serif;
@@ -49,7 +49,7 @@
     color: #8eb9ee;
 }
 
-.container-auth {
+.container-auth-form {
     font-family: 'Raleway', sans-serif;
 }
 
