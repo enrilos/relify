@@ -1,17 +1,35 @@
-.container-stories {
+.container-stories,
+.container-stories-home {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     padding: 1em;
-    width: 70%;
     margin: 0 auto;
 }
 
+.container-stories {
+    width: 50%;
+}
+
 .container-story {
-    flex-basis: 32.8%;
+    flex-basis: 100%;
     text-align: center;
     padding: 10px;
-    background-color: lightskyblue;
+    background-color: lightcoral;
+    border-radius: 6px;
+    height: 20em;
     margin: 2px;
+}
+
+.container-stories-home {
+    width: 70%;
+}
+
+.container-story-home {
+    height: 20em;
+    background-color: lightgrey;
+    flex-basis: 32.8%;
+    margin: 0 2px;
+    border-radius: 6px;
 }

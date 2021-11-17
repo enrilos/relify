@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Montserrat&family=Raleway&display=swap');
 
 .container-header a {
     text-decoration: none;
@@ -18,10 +17,17 @@
 }
 
 .container-home-intro > h1 {
-    color: whitesmoke;
-    text-shadow: 2px 1px #505050;
+    color: #09ffbb;
+    text-shadow: 1px 1px #505050;
     font-size: 3em;
     font-family: 'Prata', serif;
+}
+
+.container-home-intro > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-top: 1em;
+    color: white;
 }
 
 .container-stories {
@@ -53,7 +59,15 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.container-auth-form > fieldset {
+    color: white;;
+}
+
+.container-auth-form > fieldset > legend {
+    color: #191919;
+}
+
 .container-auth-form-submit {
     font-size: 1.2em;
-    color: white;
+    color: #191919;
 }

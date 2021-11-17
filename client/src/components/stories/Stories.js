@@ -19,6 +19,7 @@ const Stories = () => {
             {stories.map(x =>
                 <StoryCard
                     key={x._id}
+                    id={x._id}
                     title={x.title}
                     content={x.content}
                 />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import storyService from '../../services/storyService';
 
-import StoryCard from '../storyCard/StoryCard';
+import HomeStoryCard from '../homeStoryCard/HomeStoryCard';
 import '../../styles/style.css';
 
 const Home = () => {
@@ -15,13 +15,13 @@ const Home = () => {
         <section className="container-home-intro">
             <h1>Escape reality.</h1>
             <h1>Dive into the mysterious world.</h1>
-            <h1>Latest stories</h1>
-            <section className="container-stories">
+            <p>Latest stories</p>
+            <section className="container-stories-home">
                 {stories.map(x =>
-                    <StoryCard
+                    <HomeStoryCard
                         key={x._id}
+                        id={x._id}
                         title={x.title}
-                        content={x.content}
                     />
                 )}
             </section>
