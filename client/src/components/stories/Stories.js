@@ -15,17 +15,15 @@ const Stories = () => {
     }, []);
 
     return (
-        <article>
-            <section className="container-stories">
-                {stories.map(x =>
-                    <StoryCard
-                        key={x._id}
-                        title={x.title}
-                        content={x.content}
-                    />
-                )}
-            </section>
-        </article>
+        <section className="container-stories">
+            {stories.map(x =>
+                <StoryCard
+                    key={x._id}
+                    title={x.title}
+                    content={x.content}
+                />
+            )}
+        </section>
     )
 }
 

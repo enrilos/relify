@@ -1,5 +1,3 @@
-.container-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container-main-content {
+    min-height: calc(100vh - 72px - 60px);
 }

@@ -14,12 +14,14 @@ function App() {
         <section className="container-main">
             <Header />
 
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/stories" element={<Stories />} />
-                <Route exact path="/login" element={<Login />} />
-                <Route path="/logout" element={<Logout />} />
-            </Routes>
+            <section className="container-main-content">
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/stories" element={<Stories />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route path="/logout" element={<Logout />} />
+                </Routes>
+            </section>
 
             <Footer />
         </section>
