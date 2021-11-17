@@ -1,17 +1,22 @@
 import { useNavigate } from 'react-router-dom';
+import authApi from '../../utils/authApi';
 import '../../styles/style.css';
 
 const Login = () => {
     let navigate = useNavigate();
 
-    const submitHandler = (e) => {
-        // Dynamically validate input fields data.
-
+    const submitHandler = async (e) => {
+        // Dynamic input validator with Formik?
         e.preventDefault();
 
         const { email, password } = e.target;
 
-        // Redirect after successful submission.
+        const user = {
+            email: email.value,
+            password: password.value
+        };
+
+        await authApi.login(user);
         navigate("/");
     }
 
