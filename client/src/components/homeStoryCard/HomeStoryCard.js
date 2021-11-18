@@ -7,6 +7,7 @@ const HomeStoryCard = ({
     content
 }) => {
     return (
+        <Link className="container-story-wrapper" to={"/details/" + id}>
             <article className="container-story-home">
                 <p></p>
                 <p className="container-story-home-title">{title}</p>
@@ -14,6 +15,7 @@ const HomeStoryCard = ({
                 {/* The below link will lead to a details page where the user can like/favourite/comment */}
                 {/* <Link to={"/details/" + id}>Read full</Link> */}
             </article>
+        </Link>
     );
 }
 
