@@ -27,7 +27,7 @@ const Register = () => {
     }
 
     return (
-        <form className="container-auth-form" onSubmit={submitHandler}>
+        <form className="container-standard-form" onSubmit={submitHandler}>
             <fieldset>
                 {/* TODO: Implement font awesome icons */}
                 <legend>Register</legend>
@@ -39,7 +39,7 @@ const Register = () => {
                     <label htmlFor="password">Password</label>
                     <input id="password" type="password" name="password" />
                 </p>
-                <input className="container-auth-form-submit" type="submit" value="Submit" />
+                <input className="container-standard-form-submit" type="submit" value="Submit" />
             </fieldset>
         </form>
     );
