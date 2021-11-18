@@ -14,7 +14,6 @@ function App() {
     return (
         <section className="container-main">
             <Header />
-
             <section className="container-main-content">
                 <Routes>
                     <Route path="/" element={<Home />} />
