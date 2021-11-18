@@ -22,6 +22,7 @@ const Home = () => {
                         key={x._id}
                         id={x._id}
                         title={x.title}
+                        content={x.content}
                     />
                 )}
             </section>

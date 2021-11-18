@@ -35,6 +35,22 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.container-story-wrapper {
+    text-decoration: none;
+}
+
+.container-story-home-title {
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    color: #303030;
+    font-weight: bold;
+}
+
+.container-story-home-content {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
 .container-footer p {
     color: whitesmoke;
     font-family: 'Raleway', sans-serif;

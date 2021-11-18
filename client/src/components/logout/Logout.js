@@ -10,7 +10,7 @@ const Logout = () => {
         (async () => {
             await authApi.logout();
         })();
-    }, null);
+    }, []);
 
     return (
         <Navigate to="/" />
