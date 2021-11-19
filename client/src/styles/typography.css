@@ -71,19 +71,19 @@
     color: #8eb9ee;
 }
 
-.container-auth-form {
+.container-standard-form {
     font-family: 'Raleway', sans-serif;
 }
 
-.container-auth-form > fieldset {
+.container-standard-form > fieldset {
     color: white;;
 }
 
-.container-auth-form > fieldset > legend {
+.container-standard-form > fieldset > legend {
     color: #191919;
 }
 
-.container-auth-form-submit {
+.container-standard-form-submit {
     font-size: 1.2em;
     color: #191919;
 }
