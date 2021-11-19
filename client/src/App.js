@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import Stories from './components/stories/Stories';
 import CreateStory from './components/createStory/CreateStory';
 import EditStory from './components/editStory/EditStory';
+import Details from './components/details/Details';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Logout from './components/logout/Logout';
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/stories" element={<Stories />} />
                     <Route path="/create" element={<CreateStory />} />
                     <Route path="/edit/:storyId" element={<EditStory />} />
+                    <Route path="/details/:storyId" element={<Details />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/logout" element={<Logout />} />
