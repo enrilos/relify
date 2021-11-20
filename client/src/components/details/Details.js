@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
 import authApi from '../../utils/authApi';
 
@@ -20,7 +20,10 @@ const Details = () => {
             {
             authApi.getUserId() === story._ownerId
             ?
-            <p>You own this record.</p>
+            <section>
+                <p>You own this record.</p>
+                <Link to={"/edit/" + story._id}>Edit</Link>
+            </section>
             :
             <p>You are not the owner of this record.</p>
             }
