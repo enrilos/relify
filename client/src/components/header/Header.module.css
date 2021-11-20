@@ -4,7 +4,7 @@
 .container-header {
     display: flex;
     align-items: center;
-    background-color: #373737;
+    background-color: inherit;
     justify-content: space-evenly;
     width: 94%;
     margin: 0 auto;

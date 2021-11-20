@@ -3,8 +3,9 @@
 
 .container-footer {
     text-align: center;
-    padding: .5em;
-    background-color: #373737;
+    padding-bottom: .3em;
+    /* background-color: #313131; */
+    background-color: inherit;
 }
 
 .container-footer-logo-text {
