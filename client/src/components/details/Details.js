@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
 import authApi from '../../utils/authApi';
-import '../../styles/style.css';
 
 const Details = () => {
 
@@ -12,7 +11,7 @@ const Details = () => {
 
     useEffect(() => {
         storyService.get(storyId).then(x => setStory(x));
-    }, [])
+    }, []);
 
     return (
         <section>

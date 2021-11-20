@@ -1,0 +1,9 @@
+.container-story {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: lightcoral;
+    border-radius: 6px;
+    height: 20em;
+    margin: 2px;
+}

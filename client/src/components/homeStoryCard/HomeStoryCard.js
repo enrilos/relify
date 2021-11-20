@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../../styles/style.css';
+import styles from './HomeStoryCard.module.css';
 
 const HomeStoryCard = ({
     id,
@@ -7,10 +7,10 @@ const HomeStoryCard = ({
     content
 }) => {
     return (
-        <Link className="container-story-wrapper" to={"/details/" + id}>
-            <article className="container-story-home">
-                <p className="container-story-home-title">{title}</p>
-                <p className="container-story-home-content">{content}</p>
+        <Link className={styles['container-story-wrapper']} to={"/details/" + id}>
+            <article className={styles['container-story-home']}>
+                <p className={styles['container-story-home-title']}>{title}</p>
+                <p className={styles['container-story-home-content']}>{content}</p>
                 {/* The below link will lead to a details page where the user can like/favourite/comment */}
                 {/* <Link to={"/details/" + id}>Read full</Link> */}
             </article>

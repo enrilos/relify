@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
-import '../../styles/style.css';
+import styles from './EditStory.module.css';
 
 const EditStory = () => {
 
@@ -35,7 +35,7 @@ const EditStory = () => {
     }
 
     return (
-        <form className="container-standard-form" onSubmit={submitHandler}>
+        <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
                 <legend>Edit Story</legend>
                 <p>
@@ -44,9 +44,9 @@ const EditStory = () => {
                 </p>
                 <p>
                     <label htmlFor="content">Content</label>
-                    <textarea className="container-standard-form-content" id="content" type="text" name="content" defaultValue={story.content}></textarea>
+                    <textarea className={styles['container-standard-form-content']} id="content" type="text" name="content" defaultValue={story.content}></textarea>
                 </p>
-                <input className="container-standard-form-submit" type="submit" value="Submit" />
+                <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />
             </fieldset>
         </form>
     );

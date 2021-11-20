@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../../styles/style.css';
+import styles from './StoryCard.module.css';
 
 const StoryCard = ({
     id,
@@ -7,7 +7,7 @@ const StoryCard = ({
     content
 }) => {
     return (
-        <article className="container-story">
+        <article className={styles['container-story']}>
             <p>Title: {title}</p>
             <p>Content: {content}</p>
             {/* <p>Like</p>

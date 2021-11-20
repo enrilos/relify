@@ -1,0 +1,44 @@
+.container-standard-form {
+    padding-top: 3em;
+}
+
+.container-standard-form > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #505050;
+    border-radius: 4px;
+    padding: 1em;
+    width: 25%;
+    margin: auto;
+}
+
+.container-standard-form > fieldset > legend {
+    background-color: #23ffff;
+    padding: 8px 16px;
+}
+
+.container-standard-form > fieldset > p {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-standard-form > fieldset > p > input {
+    padding: 1em 2em;
+    width: 100%;
+    margin-top: .6em;
+    border: 2px solid #505050;
+    border-radius: 4px;
+}
+
+.container-standard-form-submit {
+    margin-top: 1em;
+    background-color: #23ffff;
+    padding: .5em 2.5em;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}

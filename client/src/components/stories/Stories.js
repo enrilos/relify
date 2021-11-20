@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import storyService from '../../services/storyService';
 
 import StoryCard from '../storyCard/StoryCard';
-import '../../styles/style.css';
+import styles from './Stories.module.css';
 
 const Stories = () => {
     const [stories, setStories] = useState([]);
@@ -15,7 +15,7 @@ const Stories = () => {
     }, []);
 
     return (
-        <section className="container-stories">
+        <section className={styles['container-stories']}>
             {stories.map(x =>
                 <StoryCard
                     key={x._id}

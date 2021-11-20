@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container-footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #373737;
+}
+
+.container-footer-logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: -webkit-linear-gradient(0deg, #29adff, #12ffb4);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-footer p a,
+.container-footer p a:hover {
+    transition: .4s ease;
+}
+
+.container-footer p {
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+.container-footer p a {
+    text-decoration: none;
+    color: #7bd3f0;
+}
+
+.container-footer p a:hover {
+    color: #8eb9ee;
+}

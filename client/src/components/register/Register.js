@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import authApi from '../../utils/authApi';
-import '../../styles/style.css';
+import styles from './Register.module.css';
 
 const Register = () => {
     let navigate = useNavigate();
@@ -27,7 +27,7 @@ const Register = () => {
     }
 
     return (
-        <form className="container-standard-form" onSubmit={submitHandler}>
+        <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
                 {/* TODO: Implement font awesome icons */}
                 <legend>Register</legend>
@@ -39,7 +39,7 @@ const Register = () => {
                     <label htmlFor="password">Password</label>
                     <input id="password" type="password" name="password" />
                 </p>
-                <input className="container-standard-form-submit" type="submit" value="Submit" />
+                <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />
             </fieldset>
         </form>
     );

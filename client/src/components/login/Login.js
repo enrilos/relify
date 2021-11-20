@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import authApi from '../../utils/authApi';
-import '../../styles/style.css';
+import styles from './Login.module.css';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -26,7 +26,7 @@ const Login = () => {
     }
 
     return (
-        <form className="container-standard-form" onSubmit={submitHandler}>
+        <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
                 {/* TODO: Implement font awesome icons */}
                 <legend>Login</legend>
@@ -38,7 +38,7 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input id="password" type="password" name="password" />
                 </p>
-                <input className="container-standard-form-submit" type="submit" value="Submit" />
+                <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />
             </fieldset>
         </form>
     );

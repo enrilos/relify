@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Montserrat&display=swap');
+
+.container-home-intro {
+    text-align: center;
+    padding: 1em;
+}
+
+.container-home-intro > h1 {
+    color: #09ffbb;
+    text-shadow: 1px 1px #505050;
+    font-size: 3em;
+    font-family: 'Prata', serif;
+}
+
+.container-home-intro > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-top: 1em;
+    color: white;
+}
+
+.container-stories-home {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    margin: 0 auto;
+}

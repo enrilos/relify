@@ -15,7 +15,7 @@ import './App.css';
 
 function App() {
     return (
-        <section className="container-main">
+        <section>
             <Header />
             <section className="container-main-content">
                 <Routes>
@@ -29,7 +29,6 @@ function App() {
                     <Route path="/logout" element={<Logout />} />
                 </Routes>
             </section>
-
             <Footer />
         </section>
     );

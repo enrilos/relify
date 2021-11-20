@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .container-header {
     display: flex;
     align-items: center;
@@ -11,6 +14,9 @@
 }
 
 .container-header-logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
     background: -webkit-linear-gradient(0deg, #29adff, #12ffb4);
     background-clip: inherit;
     -webkit-background-clip: text;
@@ -20,6 +26,12 @@
 .container-header ul {
     display:  flex;
     align-items: center;
+}
+
+.container-header ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container-header > ul:nth-child(2) {
