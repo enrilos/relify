@@ -10,6 +10,10 @@ async function getLatestThree() {
     return await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
 }
 
+async function getUserStories(userId) {
+    return await jsonRequest(`${baseUrl}?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
+}
+
 async function get(id) {
     return await jsonRequest(`${baseUrl}/${id}`);
 }
@@ -25,6 +29,7 @@ async function edit(id, story) {
 const storyService = {
     getAll,
     getLatestThree,
+    getUserStories,
     get,
     create,
     edit
