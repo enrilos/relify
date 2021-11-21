@@ -6,4 +6,6 @@
     border-radius: 6px;
     height: 20em;
     margin: 2px;
+    max-width: 100%;
+    overflow: hidden;
 }

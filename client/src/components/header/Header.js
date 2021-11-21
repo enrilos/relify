@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './Header.module.css';
 
 const Header = () => {
+    {/*TODO: Implement active btns */}
     return (
         <header className={styles['container-header']}>
             <section className={styles['container-header-logo']}>

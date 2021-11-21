@@ -6,6 +6,7 @@ const HomeStoryCard = ({
     title,
     content
 }) => {
+    {/* TODO: Make special home story cards.*/ }
     return (
         <Link className={styles['container-story-wrapper']} to={"/details/" + id}>
             <article className={styles['container-story-home']}>
