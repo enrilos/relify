@@ -13,6 +13,8 @@ import Footer from './components/footer/Footer';
 
 import './App.css';
 
+// Route guarding?
+
 function App() {
     return (
         <section>

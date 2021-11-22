@@ -6,6 +6,7 @@ const StoryCard = ({
     title,
     content
 }) => {
+    // Reuse code. combine HomeStoryCard with StoryCard.
     return (
         <article className={styles['container-story']}>
             <p>Title: {title}</p>

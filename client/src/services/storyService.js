@@ -26,13 +26,18 @@ async function edit(id, story) {
     return await jsonRequest(`${baseUrl}/${id}`, 'Put', story, true);
 }
 
+async function deleteStory(id) {
+    return await jsonRequest(`${baseUrl}/${id}`, 'Delete', undefined, true);
+}
+
 const storyService = {
     getAll,
     getLatestThree,
     getUserStories,
     get,
     create,
-    edit
+    edit,
+    deleteStory
 }
 
 export default storyService;

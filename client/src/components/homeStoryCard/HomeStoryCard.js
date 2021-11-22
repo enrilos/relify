@@ -7,6 +7,7 @@ const HomeStoryCard = ({
     content
 }) => {
     {/* TODO: Make special home story cards.*/ }
+    // Reuse code. combine HomeStoryCard with StoryCard.
     return (
         <Link className={styles['container-story-wrapper']} to={"/details/" + id}>
             <article className={styles['container-story-home']}>

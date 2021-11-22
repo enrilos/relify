@@ -9,7 +9,7 @@ const Home = () => {
     const [stories, setStories] = useState([]);
 
     useEffect(() => {
-        storyService.getLatestThree().then(x => setStories(x));
+        storyService.getLatestThree().then(x => setStories(x)).catch(err => console.log(err));
     }, []);
 
     return (

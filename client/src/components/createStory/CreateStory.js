@@ -23,6 +23,8 @@ const CreateStory = () => {
         await storyService.create(story);
         navigate("/");
     }
+    
+    // TODO: Active input box-shadow
 
     return (
         <form className={styles['container-standard-form']} onSubmit={submitHandler}>

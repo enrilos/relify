@@ -14,6 +14,7 @@ const Stories = () => {
         })();
     }, []);
 
+    // TODO: Add dynamic search bar with a debouncer.
     return (
         <section className={styles['container-stories']}>
             {stories.map(x =>

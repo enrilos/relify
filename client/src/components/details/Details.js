@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
 import authApi from '../../utils/authApi';
 import styles from './Details.module.css';
 
 const Details = () => {
 
+    let navigate = useNavigate();
     let { storyId } = useParams();
 
     const [story, setStory] = useState({});
@@ -15,12 +16,21 @@ const Details = () => {
     }, []);
 
     const OwnerTemplate = () => {
+
+        const deleteHandler = (e) => {
+            const askConfirm = window.confirm('Delete this record?');
+
+            if (askConfirm) {
+                storyService.deleteStory(storyId).then(x => navigate("/stories"));
+            }
+        }
+
         return (
             <section className={styles['container-story-details-content']}>
                 <p>You own this record.</p>
                 <section className={styles['container-story-details-action-buttons']}>
                     <Link to={"/edit/" + story._id}>Edit</Link>
-                    <Link to={"/delete/" + story._id}>Delete</Link>
+                    <Link to="#" onClick={deleteHandler}>Delete</Link>
                 </section>
             </section>
         );
@@ -49,6 +59,7 @@ const Details = () => {
         <section className={styles['container-story-details']}>
             <h1 className={styles['container-story-details-title']}>{story.title}</h1>
             <h2 className={styles['container-story-details-subtitle']}>{story.content}</h2>
+            <h2 className={styles['container-story-details-subtitle']}>{story._createdOn}</h2>
             {
                 authApi.getUserId() === story._ownerId
                     ?

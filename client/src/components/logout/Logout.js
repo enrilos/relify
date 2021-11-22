@@ -7,11 +7,7 @@ import authApi from "../../utils/authApi";
 // At least, that works for now.
 const Logout = () => {
     useEffect(() => {
-        if (authApi.isLoggedIn()) {
-            (async () => {
-                await authApi.logout();
-            })();
-        }
+        authApi.logout().catch(err => console.log(err));
     }, []);
 
     return (
