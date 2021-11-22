@@ -7,8 +7,7 @@ import CreateStory from './components/createStory/CreateStory';
 import EditStory from './components/editStory/EditStory';
 import Details from './components/details/Details';
 import MyStories from './components/myStories/MyStories';
-import Login from './components/login/Login';
-import Register from './components/register/Register';
+import AuthForm from './components/authForm/AuthForm';
 import Logout from './components/logout/Logout';
 import Footer from './components/footer/Footer';
 
@@ -26,8 +25,8 @@ function App() {
                     <Route path="/edit/:storyId" element={<EditStory />} />
                     <Route path="/details/:storyId" element={<Details />} />
                     <Route path="/myStories" element={<MyStories />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<AuthForm formType="Login" />} />
+                    <Route path="/register" element={<AuthForm formType="Register" />} />
                     <Route path="/logout" element={<Logout />} />
                 </Routes>
             </section>

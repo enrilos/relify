@@ -1,12 +1,14 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router"
 import authApi from '../../utils/authApi';
-import styles from './Register.module.css';
+import styles from './AuthForm.module.css';
 
-const Register = () => {
+const AuthForm = ({
+    formType
+}) => {
+
     let navigate = useNavigate();
 
     const submitHandler = async (e) => {
-        // Dynamic input validator with Formik?
         e.preventDefault();
 
         const { email, password } = e.target;
@@ -21,16 +23,21 @@ const Register = () => {
             password: password.value
         };
 
-        
-        await authApi.register(user);
+        if (formType.toLowerCase() === 'login') {
+            await authApi.login(user);
+        } else if (formType.toLowerCase() === 'register') {
+            await authApi.register(user);
+        }
+
         navigate("/");
-    }
+    };
 
     return (
         <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
                 {/* TODO: Implement font awesome icons */}
-                <legend>Register</legend>
+                {/* TODO Implement active input box shadow */}
+                <legend>{formType}</legend>
                 <p>
                     <label htmlFor="email">Email</label>
                     <input id="email" type="text" name="email" />
@@ -45,4 +52,4 @@ const Register = () => {
     );
 }
 
-export default Register;
+export default AuthForm;
