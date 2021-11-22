@@ -28,9 +28,9 @@ const Details = () => {
         return (
             <section className={styles['container-story-details-content']}>
                 <p>You own this record.</p>
-                <section className={styles['container-story-details-action-buttons']}>
-                    <Link to={"/edit/" + story._id}>Edit</Link>
-                    <Link to="#" onClick={deleteHandler}>Delete</Link>
+                <section className={styles['container-story-details-owner-buttons']}>
+                    <Link to={"/edit/" + story._id} className={styles['container-story-details-action-edit']}>Edit</Link>
+                    <Link to="#" onClick={deleteHandler} className={styles['container-story-details-action-delete']}>Delete</Link>
                 </section>
             </section>
         );
@@ -43,13 +43,15 @@ const Details = () => {
                 {
                     authApi.isLoggedIn()
                         ?
-                        <section className={styles['container-story-details-action-buttons']}>
+                        <section className={styles['container-story-details-non-owner-action-buttons']}>
                             {/*TODO: Use Like and Favourite emojis. */}
-                            <Link to="#">Like</Link>
-                            <Link to="#">Favourite</Link>
+                            <Link to="#" className={styles['container-story-details-non-owner-action-like']}>Like</Link>
+                            <Link to="#" className={styles['container-story-details-non-owner-action-favourite']}>Favourite</Link>
                         </section>
                         :
-                        null
+                        <section className={styles['container-story-details-guest-login']}>
+                            <p>Like this story? <Link to="/login">Sign in</Link> and add it to your likes.</p>
+                        </section>
                 }
             </section>
         );
@@ -58,8 +60,8 @@ const Details = () => {
     return (
         <section className={styles['container-story-details']}>
             <h1 className={styles['container-story-details-title']}>{story.title}</h1>
+            <h2 className={styles['container-story-details-published']}>Published on {new Date(story._createdOn).toLocaleDateString("ru-RU")}</h2>
             <h2 className={styles['container-story-details-subtitle']}>{story.content}</h2>
-            <h2 className={styles['container-story-details-subtitle']}>{story._createdOn}</h2>
             {
                 authApi.getUserId() === story._ownerId
                     ?

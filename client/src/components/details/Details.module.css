@@ -1,6 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&display=swap');
+
 .container-story-details {
     text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    white-space: pre-wrap;
     word-break: break-all;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-story-details-title {
+    margin-top: .4em;
+    font-size: 4em;
+}
+
+.container-story-details-published {
+    font-size: 1.4em;
+}
+
+.container-story-details-subtitle {
+    padding: 0 4em;
+    margin: 2em 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+.container-story-details-owner-buttons,
+.container-story-details-non-owner-action-buttons {
+    margin: 1em 0;
+}
+
+.container-story-details-action-edit,
+.container-story-details-action-delete,
+.container-story-details-non-owner-action-like,
+.container-story-details-non-owner-action-favourite {
+    font-family: 'Lato', sans-serif;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 1em 2em;
+    color: #333333;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.container-story-details-action-edit {
+    background-color: #4bcfff;
+}
+
+.container-story-details-action-edit:hover {
+    box-shadow: 0 0 20px 1px #4bcfff;
+}
+
+.container-story-details-action-delete {
+    background-color: #ff3b3b;
+}
+
+.container-story-details-action-delete:hover {
+    box-shadow: 0 0 20px 1px #ff3b3b;
+}
+
+.container-story-details-non-owner-action-buttons a {
+    background-color: #ff3b8d;
+}
+
+.container-story-details-non-owner-action-buttons a:hover {
+    box-shadow: 0 0 20px 1px #ff3b8d;
+}
+
+.container-story-details-guest-login {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.container-story-details-guest-login a {
+    text-decoration: none;
+    color: #2cb9ff;
+}
+
+.container-story-details-guest-login a:hover {
+    color: #ff3b8d;
+}
+
+.container-story-details-guest-login a,
+.container-story-details-guest-login a:hover,
+.container-story-details-non-owner-action-buttons a,
+.container-story-details-non-owner-action-buttons a:hover,
+.container-story-details-action-edit,
+.container-story-details-action-edit:hover,
+.container-story-details-action-delete,
+.container-story-details-action-delete:hover {
+    transition: .4s ease;
 }
