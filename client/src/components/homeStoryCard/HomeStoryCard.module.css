@@ -1,33 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;400&display=swap');
 
 .container-story-wrapper {
     flex-basis: 27.8%;
     text-decoration: none;
-    margin: 0 4px;
+    margin: 0 10px;
 }
 
-.container-story-home {
-    height: 20em;
-    padding: 0 20px;
-    background-color: lightgrey;
-    border-radius: 6px;
-    border: 2px solid #313131;
-    word-break: break-all;
+.container-home-story-card {
+    height: 22em;
+    border-radius: 15px;
     overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 0 20px;
+    text-align: center;
+    background: rgba(255,255,255,.2);
+    border: 2px solid rgba(255,255,255,.1);
     mask-image: linear-gradient(180deg,#000 60%,transparent);
 }
 
-.container-story-home-title {
+.container-home-story-card:hover {
+    transform: scale(1.07);
+}
+
+.container-home-story-card:not(:hover) {
+    transform: scale(1);
+}
+
+.container-home-story-card:hover,
+.container-home-story-card:not(:hover) {
+    transition: .7s ease;
+}
+
+.container-home-story-card-title {
     text-align: center;
     margin: .5em 0;
     font-size: 2em;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #303030;
     font-weight: bold;
 }
 
-.container-story-home-content {
+.container-home-story-card-content {
     text-align: left;
     font-family: 'Poppins', sans-serif;
     color: black;
