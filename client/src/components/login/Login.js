@@ -29,6 +29,7 @@ const Login = () => {
         <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
                 {/* TODO: Implement font awesome icons */}
+                {/* TODO Implement active input box shadow */}
                 <legend>Login</legend>
                 <p>
                     <label htmlFor="email">Email</label>

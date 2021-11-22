@@ -11,6 +11,8 @@ const MyStories = () => {
         storyService.getUserStories(authApi.getUserId()).then(x => setStories(x));
     }, [])
 
+    // TODO: add "No stories yet" when user has 0 stories.
+    // TODO: loading bar?
     return (
         <section className={styles['container-my-stories']}>
             <h1 className={styles['container-stories-title']}>My Stories</h1>
