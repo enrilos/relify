@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
 import authApi from '../../utils/authApi';
 import styles from './AuthForm.module.css';
 
@@ -38,15 +39,22 @@ const AuthForm = ({
                 {/* TODO: Implement font awesome icons */}
                 {/* TODO Implement active input box shadow */}
                 <legend>{formType}</legend>
-                <p>
+                <p className={styles['container-standard-form-input']}>
                     <label htmlFor="email">Email</label>
                     <input id="email" type="text" name="email" />
                 </p>
-                <p>
+                <p className={styles['container-standard-form-input']}>
                     <label htmlFor="password">Password</label>
                     <input id="password" type="password" name="password" />
                 </p>
                 <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />
+                {
+                    formType.toLowerCase() === 'login'
+                    ?
+                    <p className={styles['have-or-have-not-and-account-message']}>Don't have an accout yet? <Link to="/register">Sign up</Link></p>
+                    :
+                    <p className={styles['have-or-have-not-and-account-message']}>Already have an accout? <Link to="/login">Sign in</Link></p>
+                }
             </fieldset>
         </form>
     );
