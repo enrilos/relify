@@ -58,6 +58,8 @@
     color: whitesmoke;
     font-size: 2.6em;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-bottom: 10px solid #2fffc5;
+    display: inline-block;
 }
 
 .container-home-intro-description-subtitle {
@@ -65,6 +67,7 @@
     font-size: 1.6em;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin: 1em 0;
+    color:peachpuff;
 }
 
 .latest-stories {
@@ -100,13 +103,12 @@
 /* arrow */
 
 .container-wrapper {
-    margin-right: -4em;
+    margin-left: 2em;
 }
 
 .wrapper  svg {
     width: 100px;
     height: auto;
-    margin: 0 2rem;
     cursor: pointer;
     overflow: visible;
 }

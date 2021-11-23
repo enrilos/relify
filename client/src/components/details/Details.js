@@ -26,7 +26,7 @@ const Details = () => {
         }
 
         return (
-            <section className={styles['container-story-details-content']}>
+            <section>
                 <p>You own this record.</p>
                 <section className={styles['container-story-details-owner-buttons']}>
                     <Link to={"/edit/" + story._id} className={styles['container-story-details-action-edit']}>Edit</Link>
@@ -38,7 +38,7 @@ const Details = () => {
 
     const GuestOrUserTemplate = () => {
         return (
-            <section className={styles['container-story-details-content']}>
+            <section>
                 <p>You DO NOT own this record.</p>
                 {
                     authApi.isLoggedIn()
@@ -61,7 +61,7 @@ const Details = () => {
         <section className={styles['container-story-details']}>
             <h1 className={styles['container-story-details-title']}>{story.title}</h1>
             <h2 className={styles['container-story-details-published']}>Published on {new Date(story._createdOn).toLocaleDateString("ru-RU")}</h2>
-            <h2 className={styles['container-story-details-subtitle']}>{story.content}</h2>
+            <h2 className={styles['container-story-details-content']}>{story.content}</h2>
             {
                 authApi.getUserId() === story._ownerId
                     ?

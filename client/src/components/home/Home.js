@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import storyService from '../../services/storyService';
 
-import HomeStoryCard from '../homeStoryCard/HomeStoryCard';
+import StoryCard from '../storyCard/StoryCard';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -29,11 +29,12 @@ const Home = () => {
             <p className={styles['latest-stories']}>Latest stories</p>
             <section className={styles['container-stories-home']}>
                 {stories.map(x =>
-                    <HomeStoryCard
+                    <StoryCard
                         key={x._id}
                         id={x._id}
                         title={x.title}
                         content={x.content}
+                        type="home"
                     />
                 )}
                 <Link to="/stories" className={styles['container-wrapper']}>

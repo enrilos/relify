@@ -1,4 +1,4 @@
-.container-story {
+/* .container-story {
     flex-basis: 100%;
     text-align: center;
     padding: 10px;
@@ -8,4 +8,68 @@
     margin: 2px;
     max-width: 100%;
     overflow: hidden;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;400&display=swap');
+
+.container-home-story-wrapper {
+    flex-basis: 27.8%;
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 50%);
+}
+
+.container-home-story-wrapper,
+.container-stories-story-wrapper {
+    text-decoration: none;
+    margin: 0 8px;
+    border-radius: 15px;
+}
+
+.container-stories-story-wrapper {
+    margin: 1em 0;
+    width: 100%;
+}
+
+.container-story-card {
+    height: 22em;
+    border-radius: 15px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 0 20px;
+    text-align: center;
+    background: rgba(255,255,255,.3);
+    border: 2px solid rgba(255,255,255,.1);
+    mask-image: linear-gradient(180deg,#000 60%,transparent);
+}
+
+.container-home-story-wrapper:hover,
+.container-stories-story-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.container-home-story-wrapper:not(:hover),
+.container-stories-story-wrapper:not(:hover) {
+    transform: scale(1);
+}
+
+.container-home-story-wrapper:hover,
+.container-home-story-wrapper:not(:hover),
+.container-stories-story-wrapper:hover,
+.container-stories-story-wrapper:not(:hover) {
+    transition: .6s ease;
+}
+
+.container-story-card-title {
+    text-align: center;
+    margin: .5em 0;
+    font-size: 2em;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #303030;
+    font-weight: bold;
+}
+
+.container-story-card-content {
+    text-align: left;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: black;
 }
