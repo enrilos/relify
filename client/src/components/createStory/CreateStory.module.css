@@ -3,7 +3,7 @@
 .container-standard-form {
     padding-top: 1em;
     margin: 10px 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -49,7 +49,7 @@
     margin-top: 1em;
     background-color: #ff3b8d;
     color: #333333;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: .5em 2.5em;
     border: none; 

@@ -9,7 +9,7 @@ const HomeStoryCard = ({
     {/* TODO: Make special home story cards.*/ }
     // Reuse code. combine HomeStoryCard with StoryCard.
     return (
-        <Link className={styles['container-story-wrapper']} to={"/details/" + id}>
+        <Link className={styles['container-home-story-wrapper']} to={"/details/" + id}>
             <article className={styles['container-home-story-card']}>
                 <h1 className={styles['container-home-story-card-title']}>{title}</h1>
                 <p className={styles['container-home-story-card-content']}>{content}</p>

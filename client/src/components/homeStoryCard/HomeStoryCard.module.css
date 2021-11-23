@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;400&display=swap');
 
-.container-story-wrapper {
+.container-home-story-wrapper {
     flex-basis: 27.8%;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 8px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 50%);
 }
 
 .container-home-story-card {
@@ -14,35 +16,35 @@
     word-break: break-all;
     padding: 0 20px;
     text-align: center;
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.3);
     border: 2px solid rgba(255,255,255,.1);
     mask-image: linear-gradient(180deg,#000 60%,transparent);
 }
 
-.container-home-story-card:hover {
-    transform: scale(1.07);
+.container-home-story-wrapper:hover {
+    transform: scale(1.05);
 }
 
-.container-home-story-card:not(:hover) {
+.container-home-story-wrapper:not(:hover) {
     transform: scale(1);
 }
 
-.container-home-story-card:hover,
-.container-home-story-card:not(:hover) {
-    transition: .7s ease;
+.container-home-story-wrapper:hover,
+.container-home-story-wrapper:not(:hover) {
+    transition: .6s ease;
 }
 
 .container-home-story-card-title {
     text-align: center;
     margin: .5em 0;
     font-size: 2em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: #303030;
     font-weight: bold;
 }
 
 .container-home-story-card-content {
     text-align: left;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     color: black;
 }

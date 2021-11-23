@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat&family=Lato&display=swap');
 
 .container-home-intro {
     text-align: center;
@@ -7,7 +7,7 @@
 
 .container-home-intro-title {
     width: 37%;
-    background-color: white;
+    background-color: whitesmoke;
     margin: 1em auto 0 auto;
     position: relative;
     padding: .5em;
@@ -41,17 +41,35 @@
 
 .container-home-intro-subtitle-text,
 .latest-stories {
-    color: white;
+    color: whitesmoke;
     font-size: 2.6em;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-.latest-stories {
-    margin-bottom: .5em;
-}
-
 .container-home-intro-subtitle-text {
     font-weight: 100;
+}
+
+.container-home-intro-description {
+    padding: 0 2em;
+}
+
+.container-home-intro-description-title {
+    color: whitesmoke;
+    font-size: 2.6em;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.container-home-intro-description-subtitle {
+    color: whitesmoke;
+    font-size: 1.6em;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    margin: 1em 0;
+}
+
+.latest-stories {
+    margin-top: 1em;
+    margin-bottom: .5em;
 }
 
 .container-stories-home {
@@ -72,7 +90,7 @@
 }
 
 .highlight-green {
-    color: #6effb4;
+    color: #2fffc5;
 }
 
 .highlight-purple {

@@ -21,8 +21,10 @@ const Home = () => {
                 <h1 className={styles['container-home-intro-subtitle-text']}>Share your mysterious <span className={styles['highlight-blue']}>stories</span> with other <span className={styles['highlight-green']}>individuals</span> <span className={styles['highlight-purple']}>conveniently</span>.</h1>
             </section>
             <section className={styles['container-home-intro-description']}>
-                <p>Why relify?</p>
-                {/* use a consice description of the project Introduction from github */}
+                <p className={styles['container-home-intro-description-title']}>Why relify?</p>
+                <p className={styles['container-home-intro-description-subtitle']}>During difficuly periods, such as pandemics, people tend to experience mental disorders.</p>
+                <p className={styles['container-home-intro-description-subtitle']}>The relief app - relify comes to the rescue!</p>
+                <p className={styles['container-home-intro-description-subtitle']}>Explore the mythical and mysterious stories of others, post your own, share, comment, like, enjoy your time alone or with like-minded individuals and relax.</p>
             </section>
             <p className={styles['latest-stories']}>Latest stories</p>
             <section className={styles['container-stories-home']}>

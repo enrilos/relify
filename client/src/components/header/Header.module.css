@@ -29,7 +29,7 @@
 .container-header ul li a {
     text-decoration: none;
     color: whitesmoke;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
 .container-header > ul:nth-child(2) {

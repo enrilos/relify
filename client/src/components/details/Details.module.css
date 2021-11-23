@@ -5,7 +5,7 @@
     color: whitesmoke;
     white-space: pre-wrap;
     word-break: break-all;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 .container-story-details-title {
@@ -20,7 +20,7 @@
 .container-story-details-subtitle {
     padding: 0 4em;
     margin: 2em 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
@@ -33,7 +33,7 @@
 .container-story-details-action-delete,
 .container-story-details-non-owner-action-like,
 .container-story-details-non-owner-action-favourite {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
     border: 2px solid #333333;
     border-radius: 6px;
     text-decoration: none;
