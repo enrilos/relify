@@ -28,15 +28,21 @@ const Home = () => {
             </section>
             <p className={styles['latest-stories']}>Latest stories</p>
             <section className={styles['container-stories-home']}>
-                {stories.map(x =>
-                    <StoryCard
-                        key={x._id}
-                        id={x._id}
-                        title={x.title}
-                        content={x.content}
-                        type="home"
-                    />
-                )}
+                {
+                    stories.length === 0
+                        ?
+                        <p className={styles['no-stories']}>No stories yet.</p>
+                        :
+                        stories.map(x =>
+                            <StoryCard
+                                key={x._id}
+                                id={x._id}
+                                title={x.title}
+                                content={x.content}
+                                type="home"
+                            />
+                        )
+                }
                 <Link to="/stories" className={styles['container-wrapper']}>
                     <div className={styles['wrapper']}>
                         <svg width="18px" height="17px" viewBox="-1 0 18 17">

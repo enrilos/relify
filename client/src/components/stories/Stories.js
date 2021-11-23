@@ -17,14 +17,20 @@ const Stories = () => {
     // TODO: Add dynamic search bar with a debouncer.
     return (
         <section className={styles['container-stories']}>
-            {stories.map(x =>
-                <StoryCard
-                    key={x._id}
-                    id={x._id}
-                    title={x.title}
-                    content={x.content}
-                />
-            )}
+            {
+                stories.length === 0
+                    ?
+                    <p className={styles['no-stories']}>No stories yet.</p>
+                    :
+                    stories.map(x =>
+                        <StoryCard
+                            key={x._id}
+                            id={x._id}
+                            title={x.title}
+                            content={x.content}
+                        />
+                    )
+            }
         </section>
     )
 }

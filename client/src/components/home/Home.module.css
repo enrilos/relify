@@ -100,6 +100,12 @@
     color: #ff3686;
 }
 
+.no-stories {
+    font-size: 4em;
+    color: whitesmoke;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 /* arrow */
 
 .container-wrapper {
