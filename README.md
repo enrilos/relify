@@ -1,6 +1,6 @@
 # 😌 relify
 
-Relax yourself by using relify - the relief app.
+Relax yourself with relify - the relief app.
 
 # Introduction
 
