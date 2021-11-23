@@ -3,11 +3,11 @@
 .container-stories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 1em;
     margin: 0 auto;
-    width: 50%;
+    width: 90%;
     color: black;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
