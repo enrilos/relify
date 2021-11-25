@@ -62,7 +62,7 @@ const Details = () => {
             <section>
                 <p>You DO NOT own this record.</p>
                 {
-                    authApi.isLoggedIn() && storyService.hasUserLikedStory(storyId, authApi.getUserId()) && hasLiked === 0
+                    authApi.isLoggedIn() && hasLiked === 0
                         ?
                         <section className={styles['container-story-details-non-owner-action-buttons']}>
                             {/*TODO: Use Like and Favourite emojis. */}
