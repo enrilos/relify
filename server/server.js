@@ -422,7 +422,6 @@
     userService.post('login', onLogin);
     userService.get('logout', onLogout);
 
-
     function getSelf(context, tokens, query, body) {
         if (context.user) {
             const result = Object.assign({}, context.user);
@@ -1333,37 +1332,41 @@
         }
     };
     var seedData = {
-        games: {
+        // TODO: Seed necessary data for project ~ (stories, user favourites, user likes, etc..)
+        stories: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "CoverFire",
-                "category": "Action",
-                "maxLevel": "70",
-                "imageUrl": "/images/CoverFire.png",
-                "summary": "Best action shooter game, easy controls, realistic 3D graphics and fun offline missions. Get your best shooting gun and take to action!",
-                "_createdOn": 1617194128618,
+                "title": "The government couldn't care less for you.",
+                "content": "Facts don't care about your feelings. Don't tread on me.",
+                "_createdOn": 1617194128618
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "MineCraft",
-                "category": "Arcade",
-                "maxLevel": "250",
-                "imageUrl": "/images/MineCraft.png",
-                "summary": "Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for.",
-                "_createdOn": 1617194210928,
-            },
-            "126777f5-3277-42ad-b874-76d043b069cb": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "title": "Zombie Lang",
-                "category": "Vertical Shooter",
-                "maxLevel": "100",
-                "imageUrl": "/images/ZombieLang.png",
-                "summary": "With it’s own unique story, set between the events of the first movie, Zombieland: Double Tap- Road Trip is a ridiculously fun top-down twin-stick shooter featuring local co-op multiplayer for up to four players. Play as your favorite heroes from the original — Tallahassee, Columbus, Wichita and Little Rock — as well as new unlockable characters from the upcoming sequel.  The game embraces the game-like elements seen in the film by  incorporating everything from the “Rules” to “Zombie Kill of the Week”.  Use your special abilities, an arsenal of weapons and the essential Zombieland rules for survival to stay alive against huge numbers of uniquely grotesque and dangerous undead monstrosities in Zombieland: Double Tap- Road Trip’s story-based campaign mode, wave-based horde mode, and boss battles.",
-                "_createdOn": 1617194295474,
+                "title": "Martian",
+                "content": '"A big greyish rounded bulk, the size, perhaps, of a bear, was rising slowly and painfully out of the cylinder. As it bulged up and caught the light, it glistened like wet leather. Two large dark-coloured eyes were regarding me steadfastly. The mass that framed them, the head of the thing, was rounded, and had, one might say, a face. There was a mouth under the eyes, the lipless brim of which quivered and panted, and dropped saliva. The whole creature heaved and pulsated convulsively. A lank tentacular appendage gripped the edge of the cylinder, another swayed in the air.',
+                "_createdOn": 1617194210928
+            },
+            "1840a312-225c-416a-817a-9954d4609f7c": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "title": "Morlocks",
+                "content": "The Morlocks are a humanoid species which is descended from humans, particularly low-class underground machine operators. They exist in several future timelines, notably in Mor. They are subterranean, and prefer dark, as their eyes are sensitive to light.",
+                "_createdOn": 1617194210928
+            },
+            "1840a313-2251-416a-817a-9954d4609f7c": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Red Weed",
+                "content": "Red Weed (also referred to as the Red Creeper) is a Plant-like organism from Mars that spread during the invasion of earth. It is uncertain whether it was introduced intentionally, or by accident.\nThe plant was one of several carried over from Mars but it was the only one that was able to spread across the countryside, coloring the affected areas with a red tint. The dominance of red over green in Martian flora is thought to be what gives Mars it's red color.\nRed Weed in the novel is composed of stubby fingers, resembling small cacti, and, when underwater, wide fronds, resembling Lilly pads. Red weed can grow to a height of at least six feet on land, and can rapidly clog waterways, hiding bridges, and causing widespread flooding. The red weed is apparently edible, though it has a sickly metallic taste.\nAfter about fourteen days, the red weed began to develop white patches which eventually spread, and made the plants increasingly brittle until they crumbled into powder. It is assumed that this was caused by a bacterial infection, similar to that which brought down the Martians. The narrator notes that six years after the invasion, the red weed is no longer present anywhere.",
+                "_createdOn": 1634323127000
+            },
+            "1240a313-225c-416a-817a-9954d4609f7c": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Down The Rabbit Hole",
+                "content": "01001100 01000101 01010100 00100000 01001001 01010100 00100000 01000010 01000101 01000111 01001001 01001110 00101110 00101110 00101110",
+                "_createdOn": 1637001527000
             }
         },
-        comments: {
-        
+        likes: {
+            
         }
     };
     var rules$1 = {
@@ -1392,7 +1395,7 @@
 
     const server = http__default['default'].createServer(requestHandler(plugins, services));
 
-    const port = 3030;
+    const port = 5000;
     server.listen(port);
     console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
     console.log(`Admin panel located at http://localhost:${port}/admin`);

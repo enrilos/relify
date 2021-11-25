@@ -30,6 +30,7 @@ function App() {
                     <Route path="/login" element={<AuthForm formType="Login" />} />
                     <Route path="/register" element={<AuthForm formType="Register" />} />
                     <Route path="/logout" element={<Logout />} />
+                    {/* Add NotFound page */}
                 </Routes>
             </section>
             <Footer />

@@ -55,10 +55,11 @@
 }
 
 .container-home-intro-description-title {
-    color: whitesmoke;
+    /* color: whitesmoke; */
+    color: #1aeaff;
     font-size: 2.6em;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    border-bottom: 10px solid #2fffc5;
+    border-bottom: 8px solid whitesmoke;
     display: inline-block;
 }
 
