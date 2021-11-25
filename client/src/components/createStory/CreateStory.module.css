@@ -44,6 +44,17 @@
     border-radius: 4px;
 }
 
+.container-standard-form > fieldset > p > input:focus,
+.container-standard-form > fieldset > p > textarea:focus {
+    box-shadow: 0 0 20px 1px rgb(0 0 0 / 50%);
+    transition: .4s;
+}
+
+.container-standard-form > fieldset > p > input:not(:focus),
+.container-standard-form > fieldset > p > textarea:not(:focus) {
+    transition: .4s;
+}
+
 .container-standard-form-submit {
     font-size: 1.2em;
     margin-top: 1em;

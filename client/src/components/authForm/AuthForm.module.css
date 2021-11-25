@@ -41,6 +41,15 @@
     border-radius: 4px;
 }
 
+.container-standard-form-input > input:focus {
+    box-shadow: 0 0 20px 1px rgb(0 0 0 / 50%);
+}
+
+.container-standard-form-input > input:focus,
+.container-standard-form-input > input:not(:focus) {
+    transition: .4s;
+}
+
 .container-standard-form-submit {
     margin-top: 1em;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
