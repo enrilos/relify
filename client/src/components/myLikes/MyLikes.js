@@ -24,7 +24,13 @@ const MyLikes = () => {
     // TODO: loading bar?
     return (
         <section className={styles['container-my-likes']}>
-            <h1 className={styles['container-likes-title']}>Liked stories: {likes}</h1>
+            {
+                stories.length === 0
+                    ?
+                    <h1 className={styles['container-likes-title']}>No liked stories yet.</h1>
+                    :
+                    <h1 className={styles['container-likes-title']}>Liked stories: {likes}</h1>
+            }
             <section className={styles['container-likes']}>
                 {stories.map(x =>
                     <StoryCard
