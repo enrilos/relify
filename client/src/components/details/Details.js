@@ -19,6 +19,7 @@ const Details = () => {
     }, []);
 
     useEffect(() => {
+        // This is a redundant request when user is owner.
         storyService.hasUserLikedStory(storyId, authApi.getUserId()).then(x => setHasLiked(x));
     }, [false]);
 
@@ -44,7 +45,7 @@ const Details = () => {
         );
     }
 
-    const GuestOrUserTemplate = () => {
+    const UserTemplate = () => {
 
         const likeHandler = async (e) => {
 
@@ -62,7 +63,7 @@ const Details = () => {
             <section>
                 <p>You DO NOT own this record.</p>
                 {
-                    authApi.isLoggedIn() && hasLiked === 0
+                    hasLiked === 0
                         ?
                         <section className={styles['container-story-details-non-owner-action-buttons']}>
                             {/*TODO: Use Like and Favourite emojis. */}
@@ -70,10 +71,20 @@ const Details = () => {
                             {/* <Link to="#" className={styles['container-story-details-non-owner-action-favourite']}>Favourite</Link> */}
                         </section>
                         :
-                        <section className={styles['container-story-details-guest-login']}>
-                            {/* <p>Like this story? <Link to="/login">Sign in</Link> and add it to your likes.</p> */}
-                        </section>
+                        null
                 }
+                <p>Likes: {storyLikes}</p>
+            </section>
+        );
+    }
+
+    const GuestTemplate = (e) => {
+        return (
+            <section>
+                <p>You DO NOT own this record.</p>
+                <section className={styles['container-story-details-guest-login']}>
+                    <p>Like this story? <Link to="/login">Sign in</Link> and add it to your likes.</p>
+                </section>
                 <p>Likes: {storyLikes}</p>
             </section>
         );
@@ -89,7 +100,11 @@ const Details = () => {
                     ?
                     <OwnerTemplate />
                     :
-                    <GuestOrUserTemplate />
+                    authApi.isLoggedIn()
+                        ?
+                        <UserTemplate />
+                        :
+                        <GuestTemplate />
             }
         </section>
     );

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-.container-my-stories {
+.container-my-likes {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-.container-stories {
+.container-likes {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -15,7 +15,7 @@
     color: #333333;
 }
 
-.container-stories-title {
+.container-likes-title {
     font-size: 2em;
     color: whitesmoke;
     text-align: center;
