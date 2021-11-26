@@ -1,0 +1,38 @@
+.container-story-details-owner-buttons {
+    margin: 1em 0;
+}
+
+.container-story-details-action-edit,
+.container-story-details-action-delete {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 1em 2em;
+    color: #333333;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.container-story-details-action-edit {
+    background-color: #4bcfff;
+}
+
+.container-story-details-action-edit:hover {
+    box-shadow: 0 0 20px 1px #4bcfff;
+}
+
+.container-story-details-action-delete {
+    background-color: #ff3b3b;
+}
+
+.container-story-details-action-delete:hover {
+    box-shadow: 0 0 20px 1px #ff3b3b;
+}
+
+.container-story-details-action-edit,
+.container-story-details-action-edit:hover,
+.container-story-details-action-delete,
+.container-story-details-action-delete:hover {
+    transition: .4s;
+}

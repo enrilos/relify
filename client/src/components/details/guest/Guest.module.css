@@ -1,0 +1,19 @@
+.container-story-details-guest-login {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.container-story-details-guest-login a {
+    text-decoration: none;
+    color: #2cb9ff;
+}
+
+.container-story-details-guest-login a:hover {
+    color: #ff3b8d;
+}
+
+.container-story-details-guest-login a,
+.container-story-details-guest-login a:hover {
+    transition: .4s ease;
+}
