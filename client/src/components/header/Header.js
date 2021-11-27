@@ -1,24 +1,27 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './Header.module.css';
 
 const Header = ({
     email
 }) => {
 
+    const setActiveRegular = ({isActive}) =>  isActive ? styles['active-link'] : styles['menu-regular-btn'];
+    const setActiveAuth = ({isActive}) =>  isActive ? styles['active-link'] : styles['menu-auth-btn'];
+
     const UserTemplate = () => {
         return (
             <>
                 <ul className={styles['menu-regular']}>
-                    <li><Link to="/stories">Stories</Link></li>
-                    <li><Link to="/create">Post Story</Link></li>
-                    <li><Link to="/myStories">My Stories</Link></li>
-                    <li><Link to="/myLikes">My Likes</Link></li>
-                    {/* <li><Link to="/myFavourites">My Favourites</Link></li> */}
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><NavLink to="/stories" className={setActiveRegular}>Stories</NavLink></li>
+                    <li><NavLink to="/create" className={setActiveRegular}>Post Story</NavLink></li>
+                    <li><NavLink to="/myStories" className={setActiveRegular}>My Stories</NavLink></li>
+                    <li><NavLink to="/myLikes" className={setActiveRegular}>My Likes</NavLink></li>
+                    {/* <li><NavLink to="/myFavourites" className={setActiveRegular}>My Favourites</NavLink></li> */}
+                    <li><NavLink to="/about" className={setActiveRegular}>About</NavLink></li>
+                    <li><NavLink to="/contact" className={setActiveRegular}>Contact</NavLink></li>
                 </ul>
                 <ul className={styles['menu-auth']}>
-                    <li><Link to="/logout">Logout</Link></li>
+                    <li><NavLink to="/logout" className={setActiveAuth}>Logout</NavLink></li>
                 </ul>
             </>
         );
@@ -28,13 +31,13 @@ const Header = ({
         return (
             <>
                 <ul className={styles['menu-regular']}>
-                    <li><Link to="/stories">Stories</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><NavLink to="/stories" className={setActiveRegular}>Stories</NavLink></li>
+                    <li><NavLink to="/about" className={setActiveRegular}>About</NavLink></li>
+                    <li><NavLink to="/contact" className={setActiveRegular}>Contact</NavLink></li>
                 </ul>
                 <ul className={styles['menu-auth']}>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/register">Register</Link></li>
+                    <li><NavLink to="/login" className={setActiveAuth}>Login</NavLink></li>
+                    <li><NavLink to="/register" className={setActiveAuth}>Register</NavLink></li>
                 </ul>
             </>
         );
@@ -44,7 +47,7 @@ const Header = ({
     return (
         <header className={styles['container-header']}>
             <section className={styles['container-header-logo']}>
-                <Link to="/" className={styles['container-header-logo-text']}>relify</Link>
+                <NavLink to="/" className={styles['container-header-logo-text']}>relify</NavLink>
             </section>
             {
                 Boolean(email)

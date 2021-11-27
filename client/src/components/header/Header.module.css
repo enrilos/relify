@@ -26,8 +26,8 @@
     align-items: center;
 }
 
-.menu-regular li a,
-.menu-auth li a {
+.menu-regular-btn,
+.menu-auth-btn {
     text-decoration: none;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -36,29 +36,43 @@
     font-size: 1.1em;
 }
 
-.menu-regular li a {
+.menu-regular-btn {
     background-color: #FF3B8D;
     color: whitesmoke;
-    transition: .4s;
 }
 
-.menu-regular li a:hover {
-    background-color: white;
+.menu-regular-btn:hover {
     color: #333333;
-    box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
-    transition: .4s;
 }
 
-.menu-auth li a {
+.menu-auth-btn {
     background-color: rgb(74, 222, 255);
     color: #333333;
+}
+
+.menu-regular-btn,
+.menu-regular-btn:hover,
+.menu-auth-btn,
+.menu-auth-btn:hover {
     transition: .4s;
 }
 
-.menu-auth li a:hover {
-    background-color: white;
+.menu-regular-btn:hover,
+.menu-auth-btn:hover {
     box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
-    transition: .4s;
+    background-color: white;
+}
+
+.active-link {
+    text-decoration: none;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
+    background-color: white;
+    color: #333333;
 }
 
 .container-header > ul:nth-child(2) {
