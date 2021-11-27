@@ -4,7 +4,6 @@ import styles from './Header.module.css';
 const Header = ({
     email
 }) => {
-
     const setActiveRegular = ({isActive}) =>  isActive ? styles['active-link'] : styles['menu-regular-btn'];
     const setActiveAuth = ({isActive}) =>  isActive ? styles['active-link'] : styles['menu-auth-btn'];
 
