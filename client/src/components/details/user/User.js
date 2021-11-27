@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import FontAwesomeIcon from 'react-fontawesome';
 import storyService from "../../../services/storyService";
 import styles from './User.module.css';
 
@@ -28,14 +29,15 @@ const User = ({
                 hasLiked === 0
                     ?
                     <section className={styles['container-story-details-non-owner-action-buttons']}>
-                        {/*TODO: Use Like and Favourite emojis. */}
+                        {/*TODO: Use Like and Favourite icons. */}
                         <Link to="#" onClick={likeHandler} className={styles['container-story-details-non-owner-action-like']}>Like</Link>
                         {/* <Link to="#" className={styles['container-story-details-non-owner-action-favourite']}>Favourite</Link> */}
                     </section>
                     :
                     null
             }
-            <p>Likes: {storyLikes}</p>
+            {/* <p className={styles['total-likes']}>Likes: {storyLikes}</p> */}
+            <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
         </section>
     );
 }

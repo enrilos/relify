@@ -31,7 +31,7 @@ const EditStory = () => {
         };
 
         await storyService.edit(storyId, story);
-        navigate("/");
+        navigate("/myStories");
     }
 
     return (

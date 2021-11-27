@@ -20,10 +20,10 @@ import { useState } from 'react';
 function App() {
 
     // NOTE:
-    // Using both server.js (with localStorage) and a local state in this file for storing user data.
-    // Local user state was the adequate solution (in this case) specifically for the dynamic change in the auth header render.
+    // Using both server.js (with localStorage) and a local state in this component for storing email.
+    // Local email state was the adequate solution (in this case) specifically for the dynamic change in the auth header render.
     // Thanks to rerendering functionality by changing the state.
-    // It also means that refreshing the page would result in the local state's (App.js) user data to be deleted (will equal header guest menu) but not the data in the localStorage.
+    // It also means that refreshing the page would result in the local state's (App.js) email to be reset (will equal header guest menu) but not the data in the localStorage.
     // However, since this defense project will be tested as a SPA app (no manual refreshing), it should work correctly.
 
     // Apparently, only email property is required in order for the header to render dynamically.

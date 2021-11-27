@@ -25,7 +25,8 @@ const Owner = ({
                 <Link to={"/edit/" + storyId} className={styles['container-story-details-action-edit']}>Edit</Link>
                 <Link to="#" onClick={deleteHandler} className={styles['container-story-details-action-delete']}>Delete</Link>
             </section>
-            <p id="total-likes">Likes: {storyLikes}</p>
+            {/* <p className={styles['total-likes']}>Likes: {storyLikes}</p> */}
+            <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
         </section>
     );
 }

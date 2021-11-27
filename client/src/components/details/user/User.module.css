@@ -1,17 +1,16 @@
 .container-story-details-non-owner-action-buttons {
-    margin: 1em 0;
+    margin: 2em 0;
 }
 
 .container-story-details-non-owner-action-like,
 .container-story-details-non-owner-action-favourite {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
     border: 2px solid #333333;
-    border-radius: 6px;
+    border-radius: 20px;
     text-decoration: none;
-    padding: 1em 2em;
+    padding: 12px 30px;
     color: #333333;
-    margin-right: .5em;
-    margin-left: .5em;
 }
 
 .container-story-details-non-owner-action-like {
@@ -33,4 +32,9 @@
 .container-story-details-non-owner-action-buttons a,
 .container-story-details-non-owner-action-buttons a:hover {
     transition: .4s;
+}
+
+.total-likes {
+    font-size: 1.5em;
+    margin: 1em 0;
 }

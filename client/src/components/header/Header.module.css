@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     background-color: inherit;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 94%;
     margin: 0 auto;
     border-bottom-left-radius: 10px;
@@ -26,10 +26,39 @@
     align-items: center;
 }
 
-.container-header ul li a {
+.menu-regular li a,
+.menu-auth li a {
     text-decoration: none;
-    color: whitesmoke;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+.menu-regular li a {
+    background-color: #FF3B8D;
+    color: whitesmoke;
+    transition: .4s;
+}
+
+.menu-regular li a:hover {
+    background-color: white;
+    color: #333333;
+    box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
+    transition: .4s;
+}
+
+.menu-auth li a {
+    background-color: rgb(74, 222, 255);
+    color: #333333;
+    transition: .4s;
+}
+
+.menu-auth li a:hover {
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
+    transition: .4s;
 }
 
 .container-header > ul:nth-child(2) {
