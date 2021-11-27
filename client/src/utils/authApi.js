@@ -24,6 +24,7 @@ async function login(user) {
     localStorage.setItem('authToken', response.accessToken);
     localStorage.setItem('userId', response._id);
     localStorage.setItem('email', response.email);
+    return response;
 }
 
 async function register(user) {
@@ -31,6 +32,7 @@ async function register(user) {
     localStorage.setItem('authToken', response.accessToken);
     localStorage.setItem('userId', response._id);
     localStorage.setItem('email', response.email);
+    return response;
 }
 
 async function logout() {

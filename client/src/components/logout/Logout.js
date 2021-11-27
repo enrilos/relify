@@ -5,9 +5,17 @@ import authApi from "../../utils/authApi";
 // With react-router v6, I was not able to use render() in the Route. (removed most likely)
 // Consequently, since the new v6 accepts only direct components to the element={} property, a new component Logout must be coded and provided to it.
 // At least, that works for now.
-const Logout = () => {
+const Logout = ({
+    sendUser
+}) => {
     useEffect(() => {
-        authApi.logout().catch(err => console.log(err));
+        authApi.logout()
+        .then(x => sendUser({
+            userId: '',
+            email: '',
+            authToken: ''
+        }))
+        .catch(err => console.log(err));
     }, []);
 
     return (

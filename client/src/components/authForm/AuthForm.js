@@ -4,12 +4,13 @@ import authApi from '../../utils/authApi';
 import styles from './AuthForm.module.css';
 
 const AuthForm = ({
-    formType
+    formType,
+    sendUser
 }) => {
 
     let navigate = useNavigate();
 
-    const submitHandler = async (e) => {
+    const submitHandler = (e) => {
         e.preventDefault();
 
         const { email, password } = e.target;
@@ -25,9 +26,11 @@ const AuthForm = ({
         };
 
         if (formType.toLowerCase() === 'login') {
-            await authApi.login(user);
+            authApi.login(user)
+                .then(x => sendUser(x));
         } else if (formType.toLowerCase() === 'register') {
-            await authApi.register(user);
+            authApi.register(user)
+                .then(x => sendUser(x));
         }
 
         navigate("/");
