@@ -6,15 +6,11 @@ import authApi from "../../utils/authApi";
 // Consequently, since the new v6 accepts only direct components to the element={} property, a new component Logout must be coded and provided to it.
 // At least, that works for now.
 const Logout = ({
-    sendUser
+    sendEmail
 }) => {
     useEffect(() => {
         authApi.logout()
-        .then(x => sendUser({
-            userId: '',
-            email: '',
-            authToken: ''
-        }))
+        .then(x => sendEmail(''))
         .catch(err => console.log(err));
     }, []);
 

@@ -5,7 +5,7 @@ import styles from './AuthForm.module.css';
 
 const AuthForm = ({
     formType,
-    sendUser
+    sendEmail
 }) => {
 
     let navigate = useNavigate();
@@ -27,10 +27,10 @@ const AuthForm = ({
 
         if (formType.toLowerCase() === 'login') {
             authApi.login(user)
-                .then(x => sendUser(x));
+                .then(x => sendEmail(x.email));
         } else if (formType.toLowerCase() === 'register') {
             authApi.register(user)
-                .then(x => sendUser(x));
+                .then(x => sendEmail(x.email));
         }
 
         navigate("/");

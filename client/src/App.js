@@ -20,24 +20,24 @@ import { useState } from 'react';
 function App() {
 
     // NOTE:
-    // Using both server.js (localStorage) and a local state in this file for storing user data.
+    // Using both server.js (with localStorage) and a local state in this file for storing user data.
     // Local user state was the adequate solution (in this case) specifically for the dynamic change in the auth header render.
-    // This means that refreshing the page would result in the local state's (App.js) user data to be deleted (will equal header guest menu) but not the data in the localStorage.
+    // Thanks to rerendering functionality by changing the state.
+    // It also means that refreshing the page would result in the local state's (App.js) user data to be deleted (will equal header guest menu) but not the data in the localStorage.
     // However, since this defense project will be tested as a SPA app (no manual refreshing), it should work correctly.
 
-    const [user, setUser] = useState({
-        userId: '',
-        email: '',
-        authToken: ''
-    });
+    // Apparently, only email property is required in order for the header to render dynamically.
+    // Other required data is stored in localstorage.
 
-    const getUser = (user) => {
-        setUser(user);
+    const [email, setEmail] = useState('');
+
+    const getEmail = (email) => {
+        setEmail(email);
     }
 
     return (
         <section>
-            <Header email={user?.email} />
+            <Header email={email} />
             <section className="container-main-content">
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -47,9 +47,9 @@ function App() {
                     <Route path="/details/:storyId" element={<Details />} />
                     <Route path="/myStories" element={<MyStories />} />
                     <Route path="/myLikes" element={<MyLikes />} />
-                    <Route path="/login" element={<AuthForm formType="Login" sendUser={getUser}/>} />
-                    <Route path="/register" element={<AuthForm formType="Register" sendUser={getUser} />} />
-                    <Route path="/logout" element={<Logout sendUser={getUser} />} />
+                    <Route path="/login" element={<AuthForm formType="Login" sendEmail={getEmail} />} />
+                    <Route path="/register" element={<AuthForm formType="Register" sendEmail={getEmail} />} />
+                    <Route path="/logout" element={<Logout sendEmail={getEmail} />} />
                     {/* Add NotFound page */}
                 </Routes>
             </section>
