@@ -13,7 +13,7 @@ const MyStories = () => {
 
     // TODO: loading bar?
     return (
-        <section className={styles['container-my-stories']}>
+        <section>
             {
                 stories.length === 0
                     ?

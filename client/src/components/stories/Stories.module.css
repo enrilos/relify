@@ -12,6 +12,14 @@
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
+.container-stories-title {
+    font-size: 2em;
+    color: whitesmoke;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 1em 0;
+}
+
 .no-stories {
     font-size: 4em;
     color: whitesmoke;

@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-.container-my-stories {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-}
-
 .container-stories {
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +9,7 @@
     margin: 0 auto;
     width: 90%;
     color: #333333;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
 .container-stories-title {
@@ -20,4 +17,5 @@
     color: whitesmoke;
     text-align: center;
     margin: 1em 0;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
