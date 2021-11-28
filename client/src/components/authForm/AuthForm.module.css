@@ -81,3 +81,9 @@
 .have-or-have-not-and-account-message > a:hover {
     transition: .4s;
 }
+
+.error-message {
+    display: block;
+    color: red;
+    margin-top: 4px;
+}
