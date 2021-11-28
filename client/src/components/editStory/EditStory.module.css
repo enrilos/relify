@@ -72,3 +72,9 @@
     height: 250px;
     padding: 10px;
 }
+
+.error-message {
+    display: block;
+    color: red;
+    margin-top: 4px;
+}
