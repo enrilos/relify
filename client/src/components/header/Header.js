@@ -42,10 +42,9 @@ const Header = ({
         );
     }
 
-    {/*TODO: Implement active btns */ }
     return (
         <header className={styles['container-header']}>
-            <section className={styles['container-header-logo']}>
+            <section>
                 <NavLink to="/" className={styles['container-header-logo-text']}>relify</NavLink>
             </section>
             {

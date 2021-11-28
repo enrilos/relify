@@ -28,6 +28,7 @@ const AuthForm = ({
 
     const onBlurPassword = (e) => {
         const value = e.target.value;
+
         if (value.length >= 3 && value.length <= 128) {
             setIsPasswordValid(true);
         } else {
@@ -38,9 +39,10 @@ const AuthForm = ({
     const submitHandler = (e) => {
         e.preventDefault();
 
-        const { email, password } = e.target;
-
         if (isEmailValid && isPasswordValid) {
+
+            const { email, password } = e.target;
+
             const user = {
                 email: email.value,
                 password: password.value
@@ -61,8 +63,6 @@ const AuthForm = ({
     return (
         <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
-                {/* TODO: Implement font awesome icons */}
-                {/* TODO Implement active input box shadow */}
                 <legend>{formType}</legend>
                 <p className={styles['container-standard-form-input']}>
                     <label htmlFor="email">Email</label>
