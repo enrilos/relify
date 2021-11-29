@@ -39,20 +39,18 @@ const EditStory = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
-        const { title, content } = e.target;
+        if (isTitleValid && isContentValid) {
 
-        if (!title.value || !content.value) {
-            window.alert("All fields are required.");
-            return;
+            const { title, content } = e.target;
+
+            const story = {
+                title: title.value,
+                content: content.value
+            };
+
+            await storyService.edit(storyId, story);
+            navigate("/myStories");
         }
-
-        const story = {
-            title: title.value,
-            content: content.value
-        };
-
-        await storyService.edit(storyId, story);
-        navigate("/myStories");
     }
 
     return (
