@@ -17,7 +17,7 @@ const Stories = () => {
         let timer;
         return (e) => {
             clearTimeout(timer);
-            timer = setTimeout(() => { func.call(this, e); }, timeout);
+            timer = setTimeout(() => { func.call(null, e); }, timeout);
         }
     }
 
