@@ -63,6 +63,15 @@
     cursor: pointer;
 }
 
+.container-standard-form-submit:hover {
+    box-shadow: 0 0 20px 1px #ff3b8d;
+}
+
+.container-standard-form-submit,
+.container-standard-form-submit:hover {
+    transition: .4s;
+}
+
 .have-or-have-not-and-account-message {
     margin-top: 2.5em;
     color: whitesmoke;
