@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+.container-header-stories {
+    text-align: center;
+}
+
+.container-header-stories-title {
+    font-size: 2em;
+    color: whitesmoke;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    margin: 1em 0;
+}
+
+.container-header-stories input {
+    background: #333333;
+    font-size: 1.2em;
+    color: whitesmoke;
+    width: 30%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 3px solid whitesmoke;
+    border-radius: 18px;
+}
+
+.container-header-stories input:focus {
+    outline: 2px solid whitesmoke;
+}
+
 .container-stories {
     display: flex;
     flex-wrap: wrap;
@@ -7,18 +33,10 @@
     align-items: center;
     padding: 1em;
     margin: 0 auto;
-    margin-left: 7.6vw;
+    margin-left: 7.8vw;
     width: 90%;
     color: black;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
-}
-
-.container-stories-title {
-    font-size: 2em;
-    color: whitesmoke;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 1em 0;
 }
 
 .no-stories {

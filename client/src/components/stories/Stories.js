@@ -13,16 +13,39 @@ const Stories = () => {
         })();
     }, []);
 
-    // TODO: Add dynamic search bar with a debouncer.
+    function debounce(func, timeout = 250) {
+        let timer;
+        return (e) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => { func.call(this, e); }, timeout);
+        }
+    }
+
+    const onSearchHandler = (e) => {
+        const title = e.target.value.trim();
+
+        if (title) {
+            storyService.getByTitle(title).then(x => setStories(x));
+        } else {
+            // This, however, makes a redundant request on every manually inserted white space.
+            storyService.getAll().then(x => setStories(x));
+        }
+    }
+
+    const searchChange = debounce((e) => onSearchHandler(e));
+
     return (
         <section>
-            {
-                stories.length === 0
-                    ?
-                    <h1 className={styles['container-stories-title']}>No stories yet.</h1>
-                    :
-                    <h1 className={styles['container-stories-title']}>Stories</h1>
-            }
+            <section className={styles['container-header-stories']}>
+                {
+                    stories.length === 0
+                        ?
+                        <h1 className={styles['container-header-stories-title']}>No stories.</h1>
+                        :
+                        <h1 className={styles['container-header-stories-title']}>Stories</h1>
+                }
+                <input type="text" name="title" placeholder="Search..." onKeyUp={searchChange} />
+            </section>
             <section className={styles['container-stories']}>
                 {stories.map(x =>
                     <StoryCard
