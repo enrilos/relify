@@ -22,7 +22,7 @@ const MyLikes = () => {
 
     // TODO: loading bar?
     return (
-        <section className={styles['container-my-likes']}>
+        <section>
             {
                 likedStories.length === 0
                     ?

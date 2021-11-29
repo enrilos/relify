@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-.container-my-likes {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-}
-
 .container-likes {
     display: flex;
     flex-wrap: wrap;
@@ -11,13 +7,16 @@
     align-items: center;
     padding: 1em;
     margin: 0 auto;
+    margin-left: 7.8vw;
     width: 90%;
     color: #333333;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
 .container-likes-title {
     font-size: 2em;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     margin: 1em 0;
 }
