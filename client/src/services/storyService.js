@@ -14,8 +14,18 @@ async function getUserStories(userId) {
     return await jsonRequest(`${baseUrl}/stories?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
 }
 
+// My Stories
+async function getUserStoriesByTitle(title, userId) {
+    return await jsonRequest(`${baseUrl}/stories?where=_ownerId%3D%22${userId}%22&where=title%20LIKE%20%22${title}%22&sortBy=_createdOn%20desc`);
+}
+
 async function get(id) {
     return await jsonRequest(`${baseUrl}/stories/${id}`);
+}
+
+// Stories
+async function getByTitle(title) {
+    return await jsonRequest(`${baseUrl}/stories?where=title%20LIKE%20%22${title}%22&sortBy=_createdOn%20desc`);
 }
 
 async function likeStory(body) {
@@ -50,7 +60,12 @@ async function getUserLikedStories(joinedStoryIds) {
     }
 
     // http://localhost:5000/data/stories?where=_id%20IN%20(%221840a313-225c-416a-817a-9954d4609f7c%22,%20%22ff436770-76c5-40e2-b231-77409eda7a61%22)
-    return await jsonRequest(`${baseUrl}/stories?where=_id%20IN%20(${joinedStoryIds})`);
+    return await jsonRequest(`${baseUrl}/stories?where=_id%20IN%20(${joinedStoryIds})&sortBy=_createdOn%20desc`);
+}
+
+// My Likes
+async function getUserLikedStoriesByTitle(joinedStoryIds, title) {
+    return await jsonRequest(`${baseUrl}/stories?where=_id%20IN%20(${joinedStoryIds})&where=title%20LIKE%20%22${title}%22&sortBy=_createdOn%20desc`);
 }
 
 async function create(story) {
@@ -69,13 +84,16 @@ const storyService = {
     getAll,
     getLatestThree,
     getUserStories,
+    getUserStoriesByTitle,
     get,
+    getByTitle,
     likeStory,
     getStoryLikes,
     hasUserLikedStory,
     getUserLikedStoriesCount,
     getUserLikedStoriesIds,
     getUserLikedStories,
+    getUserLikedStoriesByTitle,
     create,
     edit,
     deleteStory
