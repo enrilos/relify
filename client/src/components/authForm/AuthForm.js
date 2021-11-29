@@ -23,11 +23,11 @@ const AuthForm = ({
     };
 
     const onBlurEmail = (e) => {
-        setIsEmailValid(validateEmail(e.target.value));
+        setIsEmailValid(validateEmail(e.target.value.trim()));
     }
 
     const onBlurPassword = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
         if (value.length >= 3 && value.length <= 128) {
             setIsPasswordValid(true);

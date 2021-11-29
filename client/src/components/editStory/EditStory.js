@@ -17,7 +17,7 @@ const EditStory = () => {
     }, []);
 
     const onBlueTitle = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
         if (value.length >= 3 && value.length <= 32) {
             setIsTitleValid(true);
@@ -27,7 +27,7 @@ const EditStory = () => {
     }
 
     const onBlurContent = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
         if (value.length >= 3 && value.length <= 2048) {
             setIsContentValid(true);
@@ -38,7 +38,6 @@ const EditStory = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(storyId);
 
         const { title, content } = e.target;
 

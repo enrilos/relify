@@ -10,7 +10,7 @@ const CreateStory = () => {
     const [isContentValid, setIsContentValid] = useState(true);
 
     const onBlueTitle = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
         if (value.length >= 3 && value.length <= 32) {
             setIsTitleValid(true);
@@ -20,7 +20,7 @@ const CreateStory = () => {
     }
 
     const onBlurContent = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
         if (value.length >= 3 && value.length <= 2048) {
             setIsContentValid(true);
