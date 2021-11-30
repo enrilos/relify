@@ -13,7 +13,7 @@ const EditStory = () => {
     const [isContentValid, setIsContentValid] = useState(true);
 
     useEffect(() => {
-        storyService.get(storyId).then(x => setStory(x));
+        storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
     }, []);
 
     const onBlueTitle = (e) => {
@@ -44,11 +44,11 @@ const EditStory = () => {
             const { title, content } = e.target;
 
             const story = {
-                title: title.value,
-                content: content.value
+                title: title.value.trim(),
+                content: content.value.trim()
             };
 
-            await storyService.edit(storyId, story);
+            await storyService.edit(storyId, story).catch(err => console.error(err));
             navigate("/myStories");
         }
     }

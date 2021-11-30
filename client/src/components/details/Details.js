@@ -18,13 +18,13 @@ const Details = () => {
     const [hasLiked, setHasLiked] = useState(0);
 
     useEffect(() => {
-        storyService.get(storyId).then(x => setStory(x));
-        storyService.getStoryLikes(storyId).then(x => setStoryLikes(x));
+        storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
+        storyService.getStoryLikes(storyId).then(x => setStoryLikes(x)).catch(err => console.error(err));
     }, []);
 
     useEffect(() => {
         // This is a redundant request when user is owner.
-        storyService.hasUserLikedStory(storyId, authApi.getUserId()).then(x => setHasLiked(x));
+        storyService.hasUserLikedStory(storyId, authApi.getUserId()).then(x => setHasLiked(x)).catch(err => console.error(err));
     }, [false]);
 
     return (

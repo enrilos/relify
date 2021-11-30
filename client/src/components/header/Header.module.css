@@ -41,10 +41,6 @@
     color: white;
 }
 
-.menu-regular-btn:hover {
-    color: #333333;
-}
-
 .menu-auth-btn {
     background-color: rgb(74, 222, 255);
     color: #333333;
@@ -60,6 +56,7 @@
 .menu-regular-btn:hover,
 .menu-auth-btn:hover {
     box-shadow: 0 0 10px 1px rgb(255 255 255 / 50%);
+    color: #333333;
     background-color: white;
 }
 

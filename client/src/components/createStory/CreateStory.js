@@ -37,11 +37,11 @@ const CreateStory = () => {
             const { title, content } = e.target;
             
             const story = {
-                title: title.value,
-                content: content.value
+                title: title.value.trim(),
+                content: content.value.trim()
             };
             
-            await storyService.create(story);
+            await storyService.create(story).catch(err => console.error(err));
             navigate("/");
         }
     }

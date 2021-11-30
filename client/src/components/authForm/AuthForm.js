@@ -44,16 +44,18 @@ const AuthForm = ({
             const { email, password } = e.target;
 
             const user = {
-                email: email.value,
-                password: password.value
+                email: email.value.trim(),
+                password: password.value.trim()
             };
 
             if (formType.toLowerCase() === 'login') {
                 authApi.login(user)
-                    .then(x => sendEmail(x.email));
+                    .then(x => sendEmail(x.email))
+                    .catch(err => console.error(err));
             } else if (formType.toLowerCase() === 'register') {
                 authApi.register(user)
-                    .then(x => sendEmail(x.email));
+                    .then(x => sendEmail(x.email))
+                    .catch(err => console.error(err));
             }
 
             navigate("/");

@@ -10,7 +10,7 @@ const StoryCard = ({
 }) => {
     return (
         <Link to={"/details/" + id} className={type === 'home' ? styles['container-home-story-wrapper'] : styles['container-stories-story-wrapper']}>
-            <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+            <Tilt tiltMaxAngleX={8} tiltMaxAngleY={8}>
             <article className={styles['container-story-card']}>
                 <h1 className={styles['container-story-card-title']}>{title}</h1>
                 <p className={styles['container-story-card-content']}>{content}</p>

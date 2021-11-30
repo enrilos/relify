@@ -15,7 +15,7 @@ const Owner = ({
         const askConfirm = window.confirm('Delete this record?');
 
         if (askConfirm) {
-            storyService.deleteStory(storyId).then(x => navigate("/stories"));
+            storyService.deleteStory(storyId).then(x => navigate("/myStories")).catch(err => console.error(err));
         }
     }
 

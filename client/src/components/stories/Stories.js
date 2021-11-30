@@ -8,7 +8,7 @@ const Stories = () => {
 
     useEffect(() => {
         (async () => {
-            const stories = await storyService.getAll();
+            const stories = await storyService.getAll().catch(err => console.error(err));
             setStories(stories);
         })();
     }, []);
@@ -25,10 +25,10 @@ const Stories = () => {
         const title = e.target.value.trim();
 
         if (title) {
-            storyService.getByTitle(title).then(x => setStories(x));
+            storyService.getByTitle(title).then(x => setStories(x)).catch(err => console.error(err));
         } else {
             // This, however, makes a redundant request on every manually inserted white space.
-            storyService.getAll().then(x => setStories(x));
+            storyService.getAll().then(x => setStories(x)).catch(err => console.error(err));
         }
     }
 

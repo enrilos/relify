@@ -27,7 +27,7 @@
     padding: 0 20px;
     text-align: center;
     background: rgba(255,255,255,.4);
-    mask-image: linear-gradient(180deg,#000 60%,transparent);
+    mask-image: linear-gradient(180deg,#000 50%,transparent);
 }
 
 .container-story-card-title {

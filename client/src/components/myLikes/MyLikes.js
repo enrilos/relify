@@ -9,24 +9,23 @@ const MyLikes = () => {
     const [likedStories, setLikedStories] = useState([]);
 
     useEffect(() => {
-        storyService.getUserLikedStoriesCount(authApi.getUserId()).then(x => setLikesCount(x));
+        storyService.getUserLikedStoriesCount(authApi.getUserId()).then(x => setLikesCount(x)).catch(err => console.error(err));
     }, []);
 
     useEffect(() => {
         (async () => {
-            const storyIds = await storyService.getUserLikedStoriesIds(authApi.getUserId());
-            const likedStories = await storyService.getUserLikedStories(Object.values(storyIds).map(x => `"${x.storyId}"`));
+            const storyIds = await storyService.getUserLikedStoriesIds(authApi.getUserId()).catch(err => console.error(err));
+            const likedStories = await storyService.getUserLikedStories(Object.values(storyIds).map(x => `"${x.storyId}"`)).catch(err => console.error(err));
             setLikedStories(likedStories);
         })();
     }, [])
 
-    // TODO: loading bar?
     return (
         <section>
             {
                 likedStories.length === 0
                     ?
-                    <h1 className={styles['container-likes-title']}>No liked stories yet.</h1>
+                    <h1 className={styles['container-likes-title']}>No liked stories.</h1>
                     :
                     <h1 className={styles['container-likes-title']}>Liked stories: {likesCount}</h1>
             }

@@ -8,16 +8,15 @@ const MyStories = () => {
     const [stories, setStories] = useState([]);
 
     useEffect(() => {
-        storyService.getUserStories(authApi.getUserId()).then(x => setStories(x));
+        storyService.getUserStories(authApi.getUserId()).then(x => setStories(x)).catch(err => console.error(err));
     }, [])
 
-    // TODO: loading bar?
     return (
         <section>
             {
                 stories.length === 0
                     ?
-                    <h1 className={styles['container-stories-title']}>No stories yet.</h1>
+                    <h1 className={styles['container-stories-title']}>No stories.</h1>
                     :
                     <h1 className={styles['container-stories-title']}>My Stories</h1>
             }
