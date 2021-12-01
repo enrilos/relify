@@ -1,6 +1,6 @@
 .container-about {
     text-align: center;
-    padding: 2em;
+    padding: 4em 15em;
 }
 
 .container-about-title {
@@ -12,8 +12,10 @@
 }
 
 .container-about-subtitle {
-    font-size: 1.6em;
+    color: whitesmoke;
+    white-space: pre-wrap;
+    word-break: break-all;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
     margin: 1em 0;
-    color:peachpuff;
 }
