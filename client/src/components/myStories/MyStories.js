@@ -11,6 +11,7 @@ const MyStories = () => {
         storyService.getUserStories(authApi.getUserId()).then(x => setStories(x)).catch(err => console.error(err));
     }, [])
 
+    // TODO: Infinite scroller?
     return (
         <section>
             {

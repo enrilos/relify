@@ -34,6 +34,7 @@ const Stories = () => {
 
     const searchChange = debounce((e) => onSearchHandler(e));
 
+    // TODO: Infinite scroller?
     return (
         <section>
             <section className={styles['container-header-stories']}>

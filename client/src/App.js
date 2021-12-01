@@ -12,6 +12,7 @@ import AuthForm from './components/authForm/AuthForm';
 import Logout from './components/logout/Logout';
 import Footer from './components/footer/Footer';
 
+import { AuthContext } from './contexts/AuthContext';
 import './App.css';
 import { useState } from 'react';
 
@@ -19,42 +20,36 @@ import { useState } from 'react';
 
 function App() {
 
-    // NOTE:
-    // Using both server.js (with localStorage) and a local state in this component for storing email.
-    // Local email state was the adequate solution (in this case) specifically for the dynamic change in the auth header render.
-    // Thanks to rerendering functionality by changing the state.
-    // It also means that refreshing the page would result in the local state's (App.js) email to be reset (will equal header guest menu) but not the data in the localStorage.
-    // However, since this defense project will be tested as a SPA app (no manual refreshing), it should work correctly.
-
-    // Apparently, only email property is required in order for the header to render dynamically.
-    // Other required data is stored in localstorage.
+    // Since this defense project will be tested as a SPA app (no manual refreshing), it should work correctly.
 
     const [email, setEmail] = useState('');
 
-    const getEmail = (email) => {
+    const authenticate = (email) => {
         setEmail(email);
     }
 
     return (
-        <section>
-            <Header email={email} />
-            <section className="container-main-content">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/stories" element={<Stories />} />
-                    <Route path="/create" element={<CreateStory />} />
-                    <Route path="/edit/:storyId" element={<EditStory />} />
-                    <Route path="/details/:storyId" element={<Details />} />
-                    <Route path="/myStories" element={<MyStories />} />
-                    <Route path="/myLikes" element={<MyLikes />} />
-                    <Route path="/login" element={<AuthForm formType="Login" sendEmail={getEmail} />} />
-                    <Route path="/register" element={<AuthForm formType="Register" sendEmail={getEmail} />} />
-                    <Route path="/logout" element={<Logout sendEmail={getEmail} />} />
-                    {/* Add NotFound page */}
-                </Routes>
+        <AuthContext.Provider value={authenticate}>
+            <section>
+                <Header email={email} />
+                <section className="container-main-content">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/stories" element={<Stories />} />
+                        <Route path="/create" element={<CreateStory />} />
+                        <Route path="/edit/:storyId" element={<EditStory />} />
+                        <Route path="/details/:storyId" element={<Details />} />
+                        <Route path="/myStories" element={<MyStories />} />
+                        <Route path="/myLikes" element={<MyLikes />} />
+                        <Route path="/login" element={<AuthForm formType="Login" />} />
+                        <Route path="/register" element={<AuthForm formType="Register" />} />
+                        <Route path="/logout" element={<Logout />} />
+                        {/* Add NotFound page */}
+                    </Routes>
+                </section>
+                <Footer />
             </section>
-            <Footer />
-        </section>
+        </AuthContext.Provider>
     );
 }
 

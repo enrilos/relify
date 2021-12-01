@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
+import { AuthContext } from "../../contexts/AuthContext";
 import authApi from '../../utils/authApi';
 import styles from './AuthForm.module.css';
 
 const AuthForm = ({
-    formType,
-    sendEmail
+    formType
 }) => {
 
     let navigate = useNavigate();
+
+    const authenticate = useContext(AuthContext);
 
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true);
@@ -50,15 +52,19 @@ const AuthForm = ({
 
             if (formType.toLowerCase() === 'login') {
                 authApi.login(user)
-                    .then(x => sendEmail(x.email))
+                    .then((x) => {
+                        authenticate(x.email);
+                        navigate('/');
+                    })
                     .catch(err => console.error(err));
             } else if (formType.toLowerCase() === 'register') {
                 authApi.register(user)
-                    .then(x => sendEmail(x.email))
+                    .then((x) => {
+                        authenticate(x.email);
+                        navigate('/');
+                    })
                     .catch(err => console.error(err));
             }
-
-            navigate("/");
         }
     };
 

@@ -20,6 +20,7 @@ const MyLikes = () => {
         })();
     }, [])
 
+    // TODO: Infinite scroller?
     return (
         <section>
             {
