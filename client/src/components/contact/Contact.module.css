@@ -1,12 +1,35 @@
 .container-contact {
     text-align: center;
-    padding: 2em;
+    padding-top: 7em;
 }
 
-.container-contact-title {
+.container-contact-description-title {
     color: whitesmoke;
     white-space: pre-wrap;
     word-break: break-all;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 4em;
+    font-size: 2.4em;
+}
+
+.container-contact-description-subtitle {
+    color: whitesmoke;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+
+.container-contact-description-subtitle a {
+    text-decoration: none;
+    color: #7bd3f0;
+}
+
+.container-contact-description-subtitle a:hover {
+    color: #8eb9ee;
+}
+
+.container-contact-description-subtitle a,
+.container-contact-description-subtitle a:hover {
+    transition: .4s ease;
 }
