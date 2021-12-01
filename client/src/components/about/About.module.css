@@ -1,0 +1,19 @@
+.container-about {
+    text-align: center;
+    padding: 2em;
+}
+
+.container-about-title {
+    color: whitesmoke;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 4em;
+}
+
+.container-about-subtitle {
+    font-size: 1.6em;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    margin: 1em 0;
+    color:peachpuff;
+}

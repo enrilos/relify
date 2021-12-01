@@ -55,7 +55,6 @@
 }
 
 .container-home-intro-description-title {
-    /* color: whitesmoke; */
     color: #1aeaff;
     font-size: 2.6em;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -64,7 +63,6 @@
 }
 
 .container-home-intro-description-subtitle {
-    color: whitesmoke;
     font-size: 1.6em;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin: 1em 0;

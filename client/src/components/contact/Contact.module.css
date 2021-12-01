@@ -1,0 +1,12 @@
+.container-contact {
+    text-align: center;
+    padding: 2em;
+}
+
+.container-contact-title {
+    color: whitesmoke;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 4em;
+}
