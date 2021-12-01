@@ -62,11 +62,41 @@
     display: inline-block;
 }
 
+.container-home-intro-description-special {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.container-home-intro-description-special > p {
+    flex-basis: 49%;
+    color: white;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+.container-home-intro-description-special div {
+    position: relative;
+}
+
+.container-home-intro-description-special div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .1em;
+    height: 7em;
+    background-color: #FF3B8D;
+}
+
 .container-home-intro-description-subtitle {
     font-size: 1.6em;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin: 1em 0;
-    color:peachpuff;
+    color:pink;
+    padding: 0 2em;
 }
 
 .latest-stories {

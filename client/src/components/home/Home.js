@@ -23,8 +23,12 @@ const Home = () => {
             <section className={styles['container-home-intro-description']}>
                 <p className={styles['container-home-intro-description-title']}>What's relify?</p>
                 <p className={styles['container-home-intro-description-subtitle']}>Have you been feeling anxious lately?</p>
-                <p className={styles['container-home-intro-description-subtitle']}>During difficult periods, such as pandemics, people tend to experience mental disorders.</p>
-                <p className={styles['container-home-intro-description-subtitle']}>The relief app - relify comes to the rescue!</p>
+                <article className={styles['container-home-intro-description-special']}>
+                    <p className={styles['container-home-intro-description-subtitle']}>During difficult periods, such as pandemics, people tend to experience mental disorders.</p>
+                    <div>
+                    </div>
+                    <p className={styles['container-home-intro-description-subtitle']}>The relief app - relify comes to the rescue!</p>
+                </article>
                 <p className={styles['container-home-intro-description-subtitle']}>Explore the mythical and mysterious stories of others, post your own, share, comment, like, enjoy your time alone or with like-minded individuals and relax.</p>
             </section>
             <p className={styles['latest-stories']}>Latest stories</p>
