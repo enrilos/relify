@@ -27,3 +27,11 @@
     color: pink;
     font-weight: 500;
 }
+
+.container-header-stories-title,
+.container-header-comments-title {
+    font-size: 2em;
+    color: whitesmoke;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    margin: 1em auto;
+}

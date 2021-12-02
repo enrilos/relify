@@ -3,7 +3,7 @@
     padding-top: 7em;
 }
 
-.container-contact-description-title {
+.container-contact-title {
     color: whitesmoke;
     white-space: pre-wrap;
     word-break: break-all;
@@ -11,7 +11,7 @@
     font-size: 2.4em;
 }
 
-.container-contact-description-subtitle {
+.container-contact-subtitle {
     color: whitesmoke;
     white-space: pre-wrap;
     word-break: break-all;
@@ -20,16 +20,16 @@
     margin: 1em 0;
 }
 
-.container-contact-description-subtitle a {
+.container-contact-subtitle a {
     text-decoration: none;
     color: #7bd3f0;
 }
 
-.container-contact-description-subtitle a:hover {
+.container-contact-subtitle a:hover {
     color: #8eb9ee;
 }
 
-.container-contact-description-subtitle a,
-.container-contact-description-subtitle a:hover {
+.container-contact-subtitle a,
+.container-contact-subtitle a:hover {
     transition: .4s ease;
 }

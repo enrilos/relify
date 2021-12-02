@@ -1,14 +1,40 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import storyService from "../../../services/storyService";
+import authApi from '../../../utils/authApi';
 import styles from './User.module.css';
 
 const User = ({
     storyLikes,
-    setStoryLikes,
+    updateLikes,
     hasLiked,
-    setHasLiked,
+    updateHasLiked,
+    updateComments,
     storyId
 }) => {
+
+    const [isTitleValid, setIsTitleValid] = useState(true);
+    const [isCommentValid, setIsCommentValid] = useState(true);
+
+    const onBlueTitle = (e) => {
+        const value = e.target.value.trim();
+
+        if (value.length >= 3 && value.length <= 32) {
+            setIsTitleValid(true);
+        } else {
+            setIsTitleValid(false);
+        }
+    }
+
+    const onBlurComment = (e) => {
+        const value = e.target.value.trim();
+
+        if (value.length >= 3 && value.length <= 1024) {
+            setIsCommentValid(true);
+        } else {
+            setIsCommentValid(false);
+        }
+    }
 
     const likeHandler = async (e) => {
 
@@ -18,8 +44,31 @@ const User = ({
 
         await storyService.likeStory(body).catch(err => console.error(err));
         const newTotalLikes = await storyService.getStoryLikes(storyId).catch(err => console.error(err));
-        setStoryLikes(newTotalLikes);
-        setHasLiked(1);
+        updateLikes(newTotalLikes);
+        updateHasLiked(1);
+    };
+
+    const commentHandler = async (e) => {
+        e.preventDefault();
+
+        if (isTitleValid && isCommentValid) {
+
+            const { title, comment } = e.target;
+
+            const body = {
+                storyId,
+                title: title.value.trim(),
+                comment: comment.value.trim(),
+                ownerEmail: authApi.getEmail()
+            }
+
+            e.target.reset();
+
+            await storyService.commentStory(body).catch(err => console.error(err));
+            const newComments = await storyService.getStoryComments(storyId).catch(err => console.error(err));
+            console.log(newComments);
+            updateComments(newComments);
+        }
     };
 
     return (
@@ -34,6 +83,26 @@ const User = ({
                     null
             }
             <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
+
+            <form className={styles['container-standard-form']} onSubmit={commentHandler}>
+
+                <fieldset>
+                    <legend>Comment</legend>
+                    <p>
+                        <label htmlFor="title">Title</label>
+                        <input id="title" type="text" name="title" onBlur={onBlueTitle} />
+                        {!isTitleValid ? <span className={styles['error-message']}>Title must be between 3 and 32 characters.</span> : null}
+                    </p>
+                    <p>
+                        <label htmlFor="comment">Comment</label>
+                        <textarea className={styles['container-standard-form-comment']} id="comment" type="text" name="comment" onBlur={onBlurComment}></textarea>
+                        {!isCommentValid ? <span className={styles['error-message']}>Comment must be between 3 and 1024 characters.</span> : null}
+                    </p>
+                    <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />
+                </fieldset>
+
+            </form>
+
         </section>
     );
 }

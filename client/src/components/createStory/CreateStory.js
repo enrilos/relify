@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import storyService from '../../services/storyService';
+import authApi from '../../utils/authApi';
 import styles from './CreateStory.module.css';
 
 const CreateStory = () => {
@@ -38,7 +39,8 @@ const CreateStory = () => {
             
             const story = {
                 title: title.value.trim(),
-                content: content.value.trim()
+                content: content.value.trim(),
+                ownerEmail: authApi.getEmail()
             };
             
             await storyService.create(story).catch(err => console.error(err));

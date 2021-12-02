@@ -48,14 +48,17 @@ const Stories = () => {
                 <input type="text" name="title" placeholder="Search..." onKeyUp={searchChange} />
             </section>
             <section className={styles['container-stories']}>
-                {stories.map(x =>
-                    <StoryCard
-                        key={x._id}
-                        id={x._id}
-                        title={x.title}
-                        content={x.content}
-                    />
-                )}
+                {
+                    stories.map(x =>
+                        <StoryCard
+                            key={x._id}
+                            id={x._id}
+                            title={x.title}
+                            content={x.content}
+                            ownerEmail={x.ownerEmail}
+                        />
+                    )
+                }
             </section>
         </section>
     )

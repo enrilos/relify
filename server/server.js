@@ -1336,36 +1336,59 @@
         stories: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "The government couldn't care less for you.",
-                "content": "Facts don't care about your feelings. Don't tread on me.",
+                "ownerEmail": "peter@abv.bg",
+                "title": "Space Roar – Silent Scream",
+                "content": "In space, no—one can hear you scream. Right? Space is a vacuum, so there shouldn’t be any noise. And yet...you guessed it, there is.\nThe entire universe is alive with sound. And space roar isn’t just everyday sound; it’s actually these odd radio signals that we’ve detected throughout space. You know radio waves – we use them for communications: TV, cell phones, radios. Well, it looks like space is full of them, kicking out a noise that’s loud enough to drown out other signals – which is quite the nuisance for scientists trying to explore the cosmos.\nSo where’s the roar coming from? Some think that it’s leftover radiation from early stars, others believe that it’s gasses swirling around galaxy clusters, or else galaxies themselves. But for now, the roaring universe remains another unsolved (and noisy) mystery.",
                 "_createdOn": 1617194128618
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "ownerEmail": "thelocal2@gmail.com",
                 "title": "Martian",
                 "content": '"A big greyish rounded bulk, the size, perhaps, of a bear, was rising slowly and painfully out of the cylinder. As it bulged up and caught the light, it glistened like wet leather. Two large dark-coloured eyes were regarding me steadfastly. The mass that framed them, the head of the thing, was rounded, and had, one might say, a face. There was a mouth under the eyes, the lipless brim of which quivered and panted, and dropped saliva. The whole creature heaved and pulsated convulsively. A lank tentacular appendage gripped the edge of the cylinder, another swayed in the air.',
                 "_createdOn": 1617194210928
             },
             "1840a312-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "ownerEmail": "judy99@mail.com",
                 "title": "Morlocks",
                 "content": "The Morlocks are a humanoid species which is descended from humans, particularly low-class underground machine operators. They exist in several future timelines, notably in Mor. They are subterranean, and prefer dark, as their eyes are sensitive to light.",
                 "_createdOn": 1617194210928
             },
             "1840a313-2251-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "ownerEmail": "peter@abv.bg",
                 "title": "Red Weed",
                 "content": "Red Weed (also referred to as the Red Creeper) is a Plant-like organism from Mars that spread during the invasion of earth. It is uncertain whether it was introduced intentionally, or by accident.\nThe plant was one of several carried over from Mars but it was the only one that was able to spread across the countryside, coloring the affected areas with a red tint. The dominance of red over green in Martian flora is thought to be what gives Mars it's red color.\nRed Weed in the novel is composed of stubby fingers, resembling small cacti, and, when underwater, wide fronds, resembling Lilly pads. Red weed can grow to a height of at least six feet on land, and can rapidly clog waterways, hiding bridges, and causing widespread flooding. The red weed is apparently edible, though it has a sickly metallic taste.\nAfter about fourteen days, the red weed began to develop white patches which eventually spread, and made the plants increasingly brittle until they crumbled into powder. It is assumed that this was caused by a bacterial infection, similar to that which brought down the Martians. The narrator notes that six years after the invasion, the red weed is no longer present anywhere.",
                 "_createdOn": 1634323127000
             },
             "1240a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "ownerEmail": "peter@abv.bg",
                 "title": "Down The Rabbit Hole",
-                "content": "01001100 01000101 01010100 00100000 01001001 01010100 00100000 01000010 01000101 01000111 01001001 01001110 00101110 00101110 00101110",
+                "content": "01010011 01101111 00101100 00100000 01111001 01101111 01110101 00100000 01100100 01100101 01100011 01101001 01100100 01100101 01100100 00100000 01110100 01101111 00100000 01100100 01100101 01100011 01101111 01100100 01100101 00100000 01110100 01101000 01101001 01110011 00111111",
                 "_createdOn": 1637001527000
+            },
+            "1240a373-225c-416a-817a-9954d4609f7c": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "ownerEmail": "peter@abv.bg",
+                "title": "Cosmic Rays – Ghostly Visitors",
+                "content": "Space can be an intense place. But we’re totally shielded down here on Earth, aren’t we? Um...about that...\nCosmic rays are high energy particles that come from outer space, and regularly bombard Earth. Generally, these particles are completely harmless – our atmosphere kindly protects us. But there are some exceptions.\nUp high in the stratosphere, cosmic rays can affect both human beings and electronics. Astronauts and aircraft crew are exposed to higher levels of radiation than the average person because of the presence of cosmic rays – although still not enough to be a major risk.\nBut electronics are the real potential victims here. Very rarely, a cosmic ray particle with enough energy can go straight into an electronic system, causing serious damage. The high energy particles can disrupt electronic data, leading to system crashes. And in an increasingly digital world, that’s not good news.\nWe’re only just beginning to learn about the potential impact that cosmic rays could have, and the race is on to find a solution.",
+                "_createdOn": 1637001427000
+            }
+            ,
+            "1240a373-226c-416a-817a-9954d8809f7c": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "ownerEmail": "someone@gmail.com",
+                "title": "Black Holes – Massive Monsters",
+                "content": "A constant staple of sci-fi thrillers, black holes are violent, vastly destructive and invisible.\nBlack holes are regions of space in which the force of gravity is so powerful that everything around is drawn in. Not even light can escape, which is why we can’t see any of this going on.\nExperts think there could be up to 100 million black holes in our galaxy alone, and these monsters can grow to become billions of times more massive than the sun. What’s more, at the centre of most galaxies, including our own, lurks a super-massive black hole.\nBut we don’t know what happens when objects pass through the centre. They might become ‘spaghettified’: stretched apart into long strings of matter; they could even be transported through a short-cut to a different part of our universe. Spooky.",
+                "_createdOn": 1637002227000
             }
         },
         likes: {
+            
+        },
+        comments: {
             
         }
     };
