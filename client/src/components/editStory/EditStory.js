@@ -11,8 +11,8 @@ const EditStory = () => {
     let { storyId } = useParams();
 
     const [story, setStory] = useState({});
-    const [isTitleValid, setIsTitleValid] = useState(true);
-    const [isContentValid, setIsContentValid] = useState(true);
+    const [isTitleValid, setIsTitleValid] = useState(false);
+    const [isContentValid, setIsContentValid] = useState(false);
 
     useEffect(() => {
         storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));

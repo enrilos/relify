@@ -82,6 +82,7 @@ const Details = () => {
                                     title={x.title}
                                     comment={x.comment}
                                     ownerEmail={x.ownerEmail}
+                                    publishDate={new Date(x._createdOn).toLocaleDateString("ru-RU")}
                                 />
                             )
                         }

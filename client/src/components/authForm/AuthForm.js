@@ -13,8 +13,8 @@ const AuthForm = ({
 
     const { authenticate } = useContext(AuthContext);
 
-    const [isEmailValid, setIsEmailValid] = useState(true);
-    const [isPasswordValid, setIsPasswordValid] = useState(true);
+    const [isEmailValid, setIsEmailValid] = useState(false);
+    const [isPasswordValid, setIsPasswordValid] = useState(false);
 
     const validateEmail = (email) => {
         return String(email)

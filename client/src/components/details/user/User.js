@@ -13,8 +13,8 @@ const User = ({
     storyId
 }) => {
 
-    const [isTitleValid, setIsTitleValid] = useState(true);
-    const [isCommentValid, setIsCommentValid] = useState(true);
+    const [isTitleValid, setIsTitleValid] = useState(false);
+    const [isCommentValid, setIsCommentValid] = useState(false);
 
     const onBlueTitle = (e) => {
         const value = e.target.value.trim();
@@ -85,17 +85,16 @@ const User = ({
             <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
 
             <form className={styles['container-standard-form']} onSubmit={commentHandler}>
-
+                <h1>Add Comment</h1>
                 <fieldset>
-                    <legend>Comment</legend>
                     <p>
                         <label htmlFor="title">Title</label>
-                        <input id="title" type="text" name="title" onBlur={onBlueTitle} />
+                        <input id="title" type="text" name="title" placeholder="Title..." onBlur={onBlueTitle} />
                         {!isTitleValid ? <span className={styles['error-message']}>Title must be between 3 and 32 characters.</span> : null}
                     </p>
                     <p>
                         <label htmlFor="comment">Comment</label>
-                        <textarea className={styles['container-standard-form-comment']} id="comment" type="text" name="comment" onBlur={onBlurComment}></textarea>
+                        <textarea className={styles['container-standard-form-comment']} id="comment" type="text" name="comment" placeholder="Comment..." onBlur={onBlurComment}></textarea>
                         {!isCommentValid ? <span className={styles['error-message']}>Comment must be between 3 and 1024 characters.</span> : null}
                     </p>
                     <input className={styles['container-standard-form-submit']} type="submit" value="Submit" />

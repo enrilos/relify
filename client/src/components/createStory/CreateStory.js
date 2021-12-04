@@ -8,8 +8,8 @@ import styles from './CreateStory.module.css';
 const CreateStory = () => {
     let navigate = useNavigate();
 
-    const [isTitleValid, setIsTitleValid] = useState(true);
-    const [isContentValid, setIsContentValid] = useState(true);
+    const [isTitleValid, setIsTitleValid] = useState(false);
+    const [isContentValid, setIsContentValid] = useState(false);
 
     const onBlueTitle = (e) => {
         const value = e.target.value.trim();
