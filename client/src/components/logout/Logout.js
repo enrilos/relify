@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Navigate } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
+import { isAuth } from "../../hoc/isAuth";
 import authApi from "../../utils/authApi";
 
 // With react-router v6, directly passing render() was not possible in the Route. (removed most likely)
@@ -8,7 +9,7 @@ import authApi from "../../utils/authApi";
 // At least, that works for now.
 const Logout = () => {
 
-    const authenticate = useContext(AuthContext);
+    const { authenticate } = useContext(AuthContext);
 
     useEffect(() => {
         authApi.logout()
@@ -21,4 +22,4 @@ const Logout = () => {
     );
 }
 
-export default Logout;
+export default isAuth(Logout);

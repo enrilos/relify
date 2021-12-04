@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import storyService from '../../services/storyService';
 import StoryCard from '../storyCard/StoryCard';
 import authApi from '../../utils/authApi';
+import { isAuth } from '../../hoc/isAuth';
 import styles from './MyLikes.module.css';
 
 const MyLikes = () => {
@@ -44,4 +45,4 @@ const MyLikes = () => {
     );
 }
 
-export default MyLikes;
+export default isAuth(MyLikes);

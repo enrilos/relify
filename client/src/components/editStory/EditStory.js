@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
 import authApi from '../../utils/authApi';
+import { isAuth } from '../../hoc/isAuth';
 import styles from './EditStory.module.css';
 
 const EditStory = () => {
@@ -75,4 +76,4 @@ const EditStory = () => {
     );
 }
 
-export default EditStory;
+export default isAuth(EditStory);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import authApi from "../../utils/authApi.js";
 import StoryCard from '../storyCard/StoryCard.js';
 import storyService from "../../services/storyService";
+import { isAuth } from "../../hoc/isAuth.js";
 import styles from './MyStories.module.css';
 
 const MyStories = () => {
@@ -59,4 +60,4 @@ const MyStories = () => {
     );
 }
 
-export default MyStories;
+export default isAuth(MyStories);

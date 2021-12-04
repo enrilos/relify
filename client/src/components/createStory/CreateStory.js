@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import storyService from '../../services/storyService';
 import authApi from '../../utils/authApi';
+import { isAuth } from '../../hoc/isAuth';
 import styles from './CreateStory.module.css';
 
 const CreateStory = () => {
@@ -68,4 +69,4 @@ const CreateStory = () => {
     );
 }
 
-export default CreateStory;
+export default isAuth(CreateStory);

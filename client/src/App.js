@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -18,8 +18,6 @@ import { AuthContext } from './contexts/AuthContext';
 import './App.css';
 import { useState } from 'react';
 
-// Route guarding?
-
 function App() {
 
     // Since this defense project will be tested as a SPA app (no manual refreshing), it should work correctly.
@@ -31,7 +29,7 @@ function App() {
     }
 
     return (
-        <AuthContext.Provider value={authenticate}>
+        <AuthContext.Provider value={{ authenticate, email }}>
             <section>
                 <Header email={email} />
                 <section className="container-main-content">

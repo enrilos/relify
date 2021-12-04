@@ -11,7 +11,7 @@ const AuthForm = ({
 
     let navigate = useNavigate();
 
-    const authenticate = useContext(AuthContext);
+    const { authenticate } = useContext(AuthContext);
 
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true);
