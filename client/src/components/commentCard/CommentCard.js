@@ -3,13 +3,14 @@ import styles from './CommentCard.module.css';
 const CommentCard = ({
     title,
     comment,
-    ownerEmail
+    ownerEmail,
+    publishDate
 }) => {
     return (
         <article className={styles['container-comment-card']}>
-            <h1>{title}</h1>
-            <h1>{comment}</h1>
-            <h1>posted by {ownerEmail}</h1>
+            <p className={styles['container-comment-card-owner']}>{ownerEmail}, {publishDate}</p>
+            <p className={styles['container-comment-card-title']}>{title}</p>
+            <p className={styles['container-comment-card-comment']}>{comment}</p>
         </article>
     );
 }

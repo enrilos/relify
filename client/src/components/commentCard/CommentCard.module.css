@@ -1,7 +1,29 @@
 .container-comment-card {
     font-size: 2em;
     color: whitesmoke;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
     margin: 1em auto;
-    padding: 0 5em;
+    padding: .6em;
+    border: 2px solid whitesmoke;
+    text-align: left;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+    border-image-source: linear-gradient(to right, gold, red);
+    border-image-slice: 1;
+}
+
+.container-comment-card-owner {
+    font-size: .6em;
+}
+
+.container-comment-card-title {
+    margin: .4em 0 .2em 0;
+    font-weight: bolder;
+    text-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
+    color: #fff941;
+}
+
+.container-comment-card-comment {
+    font-size: .8em;
 }
