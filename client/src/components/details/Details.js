@@ -74,6 +74,7 @@ const Details = () => {
                     <h1 className={styles['container-header-comments-title']}>No comments yet.</h1>
                     :
                     <section className={styles['container-comments']}>
+                        <hr className={styles['likes-comments-line-separator']} />
                         <h1 className={styles['container-header-comments-title']}>Comments</h1>
                         {
                             comments.map(x =>

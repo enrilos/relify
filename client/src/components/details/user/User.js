@@ -83,9 +83,9 @@ const User = ({
                     null
             }
             <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
-
+            <hr className={styles['likes-comments-line-separator']} />
             <form className={styles['container-standard-form']} onSubmit={commentHandler}>
-                <h1>Add Comment</h1>
+                <h1>Post your comment</h1>
                 <fieldset>
                     <p>
                         <label htmlFor="title">Title</label>
