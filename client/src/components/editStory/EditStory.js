@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
+import authApi from '../../utils/authApi';
 import styles from './EditStory.module.css';
 
 const EditStory = () => {
@@ -45,7 +46,8 @@ const EditStory = () => {
 
             const story = {
                 title: title.value.trim(),
-                content: content.value.trim()
+                content: content.value.trim(),
+                ownerEmail: authApi.getEmail()
             };
 
             await storyService.edit(storyId, story).catch(err => console.error(err));
