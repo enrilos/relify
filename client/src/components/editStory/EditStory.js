@@ -11,8 +11,8 @@ const EditStory = () => {
     let { storyId } = useParams();
 
     const [story, setStory] = useState({});
-    const [isTitleValid, setIsTitleValid] = useState(false);
-    const [isContentValid, setIsContentValid] = useState(false);
+    const [isTitleValid, setIsTitleValid] = useState(true);
+    const [isContentValid, setIsContentValid] = useState(true);
 
     useEffect(() => {
         storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
@@ -41,13 +41,26 @@ const EditStory = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
+        const { title, content } = e.target;
+
+        const trimmedTitle = title.value.trim();
+        const trimmedContent = content.value.trim();
+
+        if (trimmedTitle.length < 3 || trimmedTitle.length > 32) {
+            setIsTitleValid(false);
+            
+            if (trimmedContent.length < 3 || trimmedContent.length > 2048) {
+                setIsContentValid(false);
+            }
+            
+            return;
+        }
+
         if (isTitleValid && isContentValid) {
 
-            const { title, content } = e.target;
-
             const story = {
-                title: title.value.trim(),
-                content: content.value.trim(),
+                title: trimmedTitle,
+                content: trimmedContent,
                 ownerEmail: authApi.getEmail()
             };
 

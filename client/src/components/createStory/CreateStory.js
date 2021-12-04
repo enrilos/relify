@@ -8,8 +8,8 @@ import styles from './CreateStory.module.css';
 const CreateStory = () => {
     let navigate = useNavigate();
 
-    const [isTitleValid, setIsTitleValid] = useState(false);
-    const [isContentValid, setIsContentValid] = useState(false);
+    const [isTitleValid, setIsTitleValid] = useState(true);
+    const [isContentValid, setIsContentValid] = useState(true);
 
     const onBlueTitle = (e) => {
         const value = e.target.value.trim();
@@ -34,25 +34,39 @@ const CreateStory = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
+        const { title, content } = e.target;
+
+        const trimmedTitle = title.value.trim();
+        const trimmedContent = content.value.trim();
+
+        if (trimmedTitle.length < 3 || trimmedTitle.length > 32) {
+            setIsTitleValid(false);
+
+            if (trimmedContent.length < 3 || trimmedContent.length > 2048) {
+                setIsContentValid(false);
+            }
+            
+            return;
+        }
+
+
         if (isTitleValid && isContentValid) {
-            
-            const { title, content } = e.target;
-            
+
             const story = {
-                title: title.value.trim(),
-                content: content.value.trim(),
+                title: trimmedTitle,
+                content: trimmedContent,
                 ownerEmail: authApi.getEmail()
             };
-            
+
             await storyService.create(story).catch(err => console.error(err));
             navigate("/");
         }
     }
-    
+
     return (
         <form className={styles['container-standard-form']} onSubmit={submitHandler}>
             <fieldset>
-                <legend>Create Story</legend>
+                <legend>Post Story</legend>
                 <p>
                     <label htmlFor="title">Title</label>
                     <input id="title" type="text" name="title" onBlur={onBlueTitle} />

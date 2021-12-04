@@ -13,8 +13,8 @@ const AuthForm = ({
 
     const { authenticate } = useContext(AuthContext);
 
-    const [isEmailValid, setIsEmailValid] = useState(false);
-    const [isPasswordValid, setIsPasswordValid] = useState(false);
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isPasswordValid, setIsPasswordValid] = useState(true);
 
     const validateEmail = (email) => {
         return String(email)
@@ -29,7 +29,7 @@ const AuthForm = ({
     }
 
     const onBlurPassword = (e) => {
-        const value = e.target.value.trim();
+        const value = e.target.value;
 
         if (value.length >= 3 && value.length <= 128) {
             setIsPasswordValid(true);
@@ -41,13 +41,25 @@ const AuthForm = ({
     const submitHandler = (e) => {
         e.preventDefault();
 
-        if (isEmailValid && isPasswordValid) {
+        const { email, password } = e.target;
 
-            const { email, password } = e.target;
+        const trimmedEmail = email.value.trim();
+
+        if (!validateEmail(trimmedEmail)) {
+            setIsEmailValid(false);
+            
+            if (password.value.length < 3 || password.value.length > 128) {
+                setIsPasswordValid(false);
+            }
+            
+            return;
+        }
+
+        if (isEmailValid && isPasswordValid) {
 
             const user = {
                 email: email.value.trim(),
-                password: password.value.trim()
+                password: password.value
             };
 
             if (formType.toLowerCase() === 'login') {

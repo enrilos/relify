@@ -13,8 +13,8 @@ const User = ({
     storyId
 }) => {
 
-    const [isTitleValid, setIsTitleValid] = useState(false);
-    const [isCommentValid, setIsCommentValid] = useState(false);
+    const [isTitleValid, setIsTitleValid] = useState(true);
+    const [isCommentValid, setIsCommentValid] = useState(true);
 
     const onBlueTitle = (e) => {
         const value = e.target.value.trim();
@@ -51,14 +51,27 @@ const User = ({
     const commentHandler = async (e) => {
         e.preventDefault();
 
-        if (isTitleValid && isCommentValid) {
+        const { title, comment } = e.target;
 
-            const { title, comment } = e.target;
+        const trimmedTitle = title.value.trim();
+        const trimmedComment = comment.value.trim();
+
+        if (trimmedTitle.length < 3 || trimmedTitle.length > 32) {
+            setIsTitleValid(false);
+            
+            if (trimmedComment.length < 3 || trimmedComment.length > 1024) {
+                setIsCommentValid(false);
+            }
+            
+            return;
+        }
+
+        if (isTitleValid && isCommentValid) {
 
             const body = {
                 storyId,
-                title: title.value.trim(),
-                comment: comment.value.trim(),
+                title: trimmedTitle,
+                comment: trimmedComment,
                 ownerEmail: authApi.getEmail()
             }
 

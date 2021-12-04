@@ -4,8 +4,7 @@
     margin: 2em 0;
 }
 
-.container-story-details-non-owner-action-like,
-.container-story-details-non-owner-action-favourite {
+.container-story-details-non-owner-action-like {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     border: 2px solid #333333;
@@ -21,14 +20,6 @@
 
 .container-story-details-non-owner-action-like:hover {
     box-shadow: 0 0 20px 1px #ff3b8d;
-}
-
-.container-story-details-non-owner-action-favourite {
-    background-color: #fc2aff;
-}
-
-.container-story-details-non-owner-action-favourite:hover {
-    box-shadow: 0 0 20px 1px #fc2aff;
 }
 
 .container-story-details-non-owner-action-buttons a,
