@@ -1,6 +1,6 @@
 import { jsonRequest } from "./jsonRequest.js";
 
-const baseUrl = 'http://localhost:5000/users';
+const baseUrl = 'https://relify-project.herokuapp.com/users';
 
 function getAuthToken() {
     return localStorage.getItem('authToken');

@@ -1,6 +1,6 @@
 import { jsonRequest } from "../utils/jsonRequest";
 
-const baseUrl = "http://localhost:5000/data";
+const baseUrl = "https://relify-project.herokuapp.com/data";
 
 async function getAll() {
     return await jsonRequest(`${baseUrl}/stories?sortBy=_createdOn%20desc`);
