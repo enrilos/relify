@@ -28,6 +28,11 @@
     font-weight: 500;
 }
 
+.total-likes {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
 .likes-comments-line-separator {
     border: 0;
     height: 1px;

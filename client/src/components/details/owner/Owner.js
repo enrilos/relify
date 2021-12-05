@@ -6,8 +6,7 @@ import Modal from '../../modal/Modal';
 import styles from './Owner.module.css';
 
 const Owner = ({
-    storyId,
-    storyLikes
+    storyId
 }) => {
 
     let navigate = useNavigate();
@@ -39,7 +38,6 @@ const Owner = ({
                             <Link to="#" onClick={() => setOpenModal(true)} className={styles['container-story-details-action-delete']}>Delete</Link>
                         </>}
             </section>
-            <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
         </section>
     );
 }

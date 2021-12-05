@@ -17,8 +17,3 @@
 .container-story-details-guest-login a:hover {
     transition: .4s ease;
 }
-
-.total-likes {
-    font-size: 1.5em;
-    margin: 1em 0;
-}

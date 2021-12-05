@@ -37,8 +37,3 @@
 .container-story-details-action-delete:hover {
     transition: .4s;
 }
-
-.total-likes {
-    font-size: 1.5em;
-    margin: 1em 0;
-}

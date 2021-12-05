@@ -5,7 +5,6 @@ import authApi from '../../../utils/authApi';
 import styles from './User.module.css';
 
 const User = ({
-    storyLikes,
     updateLikes,
     hasLiked,
     updateHasLiked,
@@ -79,7 +78,6 @@ const User = ({
 
             await storyService.commentStory(body).catch(err => console.error(err));
             const newComments = await storyService.getStoryComments(storyId).catch(err => console.error(err));
-            console.log(newComments);
             updateComments(newComments);
         }
     };
@@ -95,7 +93,6 @@ const User = ({
                     :
                     null
             }
-            <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
             <hr className={styles['likes-comments-line-separator']} />
             <form className={styles['container-standard-form']} onSubmit={commentHandler}>
                 <h1>Post your comment</h1>

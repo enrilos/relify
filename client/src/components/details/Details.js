@@ -47,18 +47,15 @@ const Details = () => {
             <h1 className={styles['container-story-details-title']}>{story.title}</h1>
             <h2 className={styles['container-story-details-published']}>Published on {new Date(story._createdOn).toLocaleDateString("ru-RU")}<br />by {story.ownerEmail}</h2>
             <h2 className={styles['container-story-details-content']}>{story.content}</h2>
+            <p className={styles['total-likes']}>{storyLikes === 0 ? 'No likes yet.' : `${storyLikes} ${storyLikes === 1 ? 'like' : 'likes'}`}</p>
             {
                 authApi.getUserId() === story._ownerId
                     ?
-                    <Owner
-                        storyId={storyId}
-                        storyLikes={storyLikes}
-                    />
+                    <Owner storyId={storyId} />
                     :
                     authApi.isLoggedIn()
                         ?
                         <User
-                            storyLikes={storyLikes}
                             updateLikes={updateLikes}
                             hasLiked={hasLiked}
                             updateHasLiked={updateHasLiked}
@@ -66,7 +63,7 @@ const Details = () => {
                             storyId={storyId}
                         />
                         :
-                        <Guest storyLikes={storyLikes} />
+                        <Guest />
             }
             {
                 comments.length === 0
@@ -84,6 +81,8 @@ const Details = () => {
                                     comment={x.comment}
                                     ownerEmail={x.ownerEmail}
                                     publishDate={new Date(x._createdOn).toLocaleDateString("ru-RU")}
+                                // Edit/Delete comment (by comment owner), set so it can rerender afterward
+                                // updateComments={updateComments}
                                 />
                             )
                         }
