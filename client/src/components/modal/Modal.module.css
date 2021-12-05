@@ -1,0 +1,83 @@
+.modal-background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+}
+
+.modal-container {
+	width: 500px;
+	height: 300px;
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+}
+
+.modal-container .title {
+	text-align: center;
+    font-size: 2em;
+}
+
+.title-close-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.title-close-button button {
+	background-color: transparent;
+	border: none;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.modal-container .body {
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4em;
+}
+
+.modal-container .footer {
+	flex: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container .footer button {
+	width: 150px;
+	height: 45px;
+	margin: 10px;
+	border: none;
+	color: white;
+	border-radius: 8px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.cancel-button {
+	background-color: crimson;
+}
+
+.cancel-button:hover {
+	box-shadow: 0 0 20px 1px crimson;
+}
+
+.confirm-button {
+	background-color: #2fbbf0;
+}
+
+.confirm-button:hover {
+	box-shadow: 0 0 20px 1px #2fbbf0;
+}
+
+.cancel-button,
+.cancel-button:hover,
+.confirm-button,
+.confirm-button:hover {
+	transition: .4s;
+}
