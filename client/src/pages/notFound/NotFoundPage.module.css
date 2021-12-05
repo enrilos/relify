@@ -1,0 +1,21 @@
+.container-not-found {
+    position: relative;
+}
+
+.container-not-found article {
+    margin: 1em 0;
+}
+
+.container-not-found h1 {
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.container-not-found img {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 80vw;
+}

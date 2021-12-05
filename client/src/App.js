@@ -13,6 +13,7 @@ import About from './components/about/About';
 import AuthForm from './components/authForm/AuthForm';
 import Logout from './components/logout/Logout';
 import Footer from './components/footer/Footer';
+import NotFoundPage from './pages/notFound/NotFoundPage';
 
 import { AuthContext } from './contexts/AuthContext';
 import './App.css';
@@ -46,7 +47,7 @@ function App() {
                         <Route path="/login" element={<AuthForm formType="Login" />} />
                         <Route path="/register" element={<AuthForm formType="Register" />} />
                         <Route path="/logout" element={<Logout />} />
-                        {/* Add NotFound page */}
+                        <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </section>
                 <Footer />
