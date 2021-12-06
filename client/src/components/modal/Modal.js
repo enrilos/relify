@@ -18,7 +18,7 @@ const Modal = ({
                 </div>
                 <div className={styles['footer']}>
                     <button className={styles['cancel-button']} onClick={() => updateModal(false)}>Cancel</button>
-                    <button className={styles['confirm-button']} onClick={() => deleteHandler()}>Confirm</button>
+                    <button className={styles['confirm-button']} onClick={(e) => deleteHandler(e)}>Confirm</button>
                 </div>
             </div>
         </div>

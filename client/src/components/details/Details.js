@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
+import commentService from '../../services/commentService';
 import authApi from '../../utils/authApi';
 
 import Guest from './guest/Guest';
@@ -22,7 +23,7 @@ const Details = () => {
     useEffect(() => {
         storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
         storyService.getStoryLikes(storyId).then(x => setStoryLikes(x)).catch(err => console.error(err));
-        storyService.getStoryComments(storyId).then(x => setComments(x)).catch(err => console.error(err));
+        commentService.getStoryComments(storyId).then(x => setComments(x)).catch(err => console.error(err));
     }, []);
 
     useEffect(() => {
@@ -72,17 +73,18 @@ const Details = () => {
                     :
                     <section className={styles['container-comments']}>
                         <hr className={styles['likes-comments-line-separator']} />
-                        <h1 className={styles['container-header-comments-title']}>Comments</h1>
+                        <h1 className={styles['container-header-comments-title']}>Comments ({comments.length})</h1>
                         {
                             comments.map(x =>
                                 <CommentCard
                                     key={x._id}
+                                    id={x._id}
                                     title={x.title}
                                     comment={x.comment}
                                     ownerEmail={x.ownerEmail}
                                     publishDate={new Date(x._createdOn).toLocaleDateString("ru-RU")}
-                                // Edit/Delete comment (by comment owner), set so it can rerender afterward
-                                // updateComments={updateComments}
+                                    updateComments={updateComments}
+                                    storyId={storyId}
                                 />
                             )
                         }

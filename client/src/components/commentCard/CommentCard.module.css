@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .container-comment-card {
     font-size: 2em;
     color: whitesmoke;
@@ -14,6 +16,12 @@
 }
 
 .container-comment-card-owner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-comment-card-owner-text {
     font-size: .6em;
 }
 
@@ -26,4 +34,40 @@
 
 .container-comment-card-comment {
     font-size: .8em;
+}
+
+.edit-button,
+.delete-button {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    border: 2px solid #333333;
+    text-decoration: none;
+    padding: 12px 30px;
+    color: #333333;
+    margin: 0 .2em;
+}
+
+.edit-button {
+    background-color: #4bcfff;
+}
+
+.edit-button:hover {
+    box-shadow: 0 0 20px 1px #4bcfff;
+}
+
+.delete-button {
+    background-color: #ff3b3b;
+}
+
+.delete-button:hover {
+    box-shadow: 0 0 20px 1px #ff3b3b;
+}
+
+.edit-button,
+.edit-button:hover,
+.delete-button,
+.delete-button:hover {
+    transition: .4s;
 }

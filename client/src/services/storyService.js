@@ -62,14 +62,6 @@ async function getUserLikedStories(joinedStoryIds) {
     return await jsonRequest(`${baseUrl}/stories?where=_id%20IN%20(${joinedStoryIds})&sortBy=_createdOn%20desc`);
 }
 
-async function commentStory(body){
-    return await jsonRequest(`${baseUrl}/comments`, 'Post', body, true);
-}
-
-async function getStoryComments(id) {
-    return await jsonRequest(`${baseUrl}/comments?where=storyId%3D%22${id}%22&sortBy=_createdOn%20desc`);
-}
-
 async function create(story) {
     return await jsonRequest(`${baseUrl}/stories`, 'Post', story, true);
 }
@@ -95,8 +87,6 @@ const storyService = {
     getUserLikedStoriesCount,
     getUserLikedStoriesIds,
     getUserLikedStories,
-    commentStory,
-    getStoryComments,
     create,
     edit,
     deleteStory

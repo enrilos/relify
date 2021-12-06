@@ -24,7 +24,6 @@ const Owner = ({
     return (
         <section>
             <section className={styles['container-story-details-owner-buttons']}>
-
                 {
                     openModal
                         ?
@@ -36,7 +35,8 @@ const Owner = ({
                         <>
                             <Link to={"/edit/" + storyId} className={styles['container-story-details-action-edit']}>Edit</Link>
                             <Link to="#" onClick={() => setOpenModal(true)} className={styles['container-story-details-action-delete']}>Delete</Link>
-                        </>}
+                        </>
+                }
             </section>
         </section>
     );

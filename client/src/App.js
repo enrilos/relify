@@ -6,6 +6,7 @@ import Stories from './components/stories/Stories';
 import CreateStory from './components/createStory/CreateStory';
 import EditStory from './components/editStory/EditStory';
 import Details from './components/details/Details';
+import EditComment from './components/editComment/EditComment';
 import MyStories from './components/myStories/MyStories';
 import MyLikes from './components/myLikes/MyLikes';
 import Contact from './components/contact/Contact';
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/stories" element={<Stories />} />
                         <Route path="/create" element={<CreateStory />} />
                         <Route path="/edit/:storyId" element={<EditStory />} />
+                        <Route path="/editComment/:commentId" element={<EditComment />} />
                         <Route path="/details/:storyId" element={<Details />} />
                         <Route path="/myStories" element={<MyStories />} />
                         <Route path="/myLikes" element={<MyLikes />} />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import storyService from "../../../services/storyService";
+import commentService from '../../../services/commentService';
 import authApi from '../../../utils/authApi';
 import styles from './User.module.css';
 
@@ -76,8 +77,8 @@ const User = ({
 
             e.target.reset();
 
-            await storyService.commentStory(body).catch(err => console.error(err));
-            const newComments = await storyService.getStoryComments(storyId).catch(err => console.error(err));
+            await commentService.create(body).catch(err => console.error(err));
+            const newComments = await commentService.getStoryComments(storyId).catch(err => console.error(err));
             updateComments(newComments);
         }
     };

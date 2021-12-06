@@ -10,6 +10,7 @@ const MyLikes = () => {
     const [likedStories, setLikedStories] = useState([]);
 
     useEffect(() => {
+        // This could be optimized for performance, since only story title, content and id is needed when listing.
         storyService.getUserLikedStoriesCount(authApi.getUserId()).then(x => setLikesCount(x)).catch(err => console.error(err));
     }, []);
 
