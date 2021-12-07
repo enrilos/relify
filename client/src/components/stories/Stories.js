@@ -8,7 +8,7 @@ const Stories = () => {
 
     useEffect(() => {
         (async () => {
-            // This could be optimized for performance, since only story title, content and id is needed when listing.
+            // This could be optimized for performance, since only story title, content and id are needed when listing.
             const stories = await storyService.getAll().catch(err => console.error(err));
             setStories(stories);
         })();

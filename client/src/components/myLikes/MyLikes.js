@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import storyService from '../../services/storyService';
+import likeService from '../../services/likeService';
 import StoryCard from '../storyCard/StoryCard';
 import authApi from '../../utils/authApi';
 import { isAuth } from '../../hoc/isAuth';
@@ -10,13 +11,13 @@ const MyLikes = () => {
     const [likedStories, setLikedStories] = useState([]);
 
     useEffect(() => {
-        // This could be optimized for performance, since only story title, content and id is needed when listing.
-        storyService.getUserLikedStoriesCount(authApi.getUserId()).then(x => setLikesCount(x)).catch(err => console.error(err));
+        // This could be optimized for performance, since only story title, content and id are needed when listing.
+        likeService.getUserLikedStoriesCount(authApi.getUserId()).then(x => setLikesCount(x)).catch(err => console.error(err));
     }, []);
 
     useEffect(() => {
         (async () => {
-            const storyIds = await storyService.getUserLikedStoriesIds(authApi.getUserId()).catch(err => console.error(err));
+            const storyIds = await likeService.getUserLikedStoriesIds(authApi.getUserId()).catch(err => console.error(err));
             const likedStories = await storyService.getUserLikedStories(Object.values(storyIds).map(x => `"${x.storyId}"`)).catch(err => console.error(err));
             setLikedStories(likedStories);
         })();

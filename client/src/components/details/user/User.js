@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import storyService from "../../../services/storyService";
+import likeService from '../../../services/likeService';
 import commentService from '../../../services/commentService';
 import authApi from '../../../utils/authApi';
 import styles from './User.module.css';
@@ -42,8 +42,8 @@ const User = ({
             storyId
         };
 
-        await storyService.likeStory(body).catch(err => console.error(err));
-        const newTotalLikes = await storyService.getStoryLikes(storyId).catch(err => console.error(err));
+        await likeService.likeStory(body).catch(err => console.error(err));
+        const newTotalLikes = await likeService.getStoryLikes(storyId).catch(err => console.error(err));
         updateLikes(newTotalLikes);
         updateHasLiked(1);
     };

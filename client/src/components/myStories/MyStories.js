@@ -9,7 +9,7 @@ const MyStories = () => {
     const [stories, setStories] = useState([]);
 
     useEffect(() => {
-        // This could be optimized for performance, since only story title, content and id is needed when listing.
+        // This could be optimized for performance, since only story title, content and id are needed when listing.
         storyService.getUserStories(authApi.getUserId()).then(x => setStories(x)).catch(err => console.error(err));
     }, [])
 

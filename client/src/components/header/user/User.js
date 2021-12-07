@@ -12,7 +12,6 @@ const User = ({
                 <li><NavLink to="/create" className={setActiveRegular}>Post Story</NavLink></li>
                 <li><NavLink to="/myStories" className={setActiveRegular}>My Stories</NavLink></li>
                 <li><NavLink to="/myLikes" className={setActiveRegular}>My Likes</NavLink></li>
-                {/* <li><NavLink to="/myFavourites" className={setActiveRegular}>My Favourites</NavLink></li> */}
                 <li><NavLink to="/about" className={setActiveRegular}>About</NavLink></li>
                 <li><NavLink to="/contact" className={setActiveRegular}>Contact</NavLink></li>
             </ul>

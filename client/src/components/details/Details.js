@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import storyService from '../../services/storyService';
+import likeService from '../../services/likeService';
 import commentService from '../../services/commentService';
 import authApi from '../../utils/authApi';
 
@@ -22,13 +23,13 @@ const Details = () => {
 
     useEffect(() => {
         storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
-        storyService.getStoryLikes(storyId).then(x => setStoryLikes(x)).catch(err => console.error(err));
+        likeService.getStoryLikes(storyId).then(x => setStoryLikes(x)).catch(err => console.error(err));
         commentService.getStoryComments(storyId).then(x => setComments(x)).catch(err => console.error(err));
     }, []);
 
     useEffect(() => {
         // This is a redundant request when user is owner.
-        storyService.hasUserLikedStory(storyId, authApi.getUserId()).then(x => setHasLiked(x)).catch(err => console.error(err));
+        likeService.hasUserLikedStory(storyId, authApi.getUserId()).then(x => setHasLiked(x)).catch(err => console.error(err));
     }, [false]);
 
     const updateLikes = (value) => {

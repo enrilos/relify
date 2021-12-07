@@ -1,10 +1,6 @@
 import styles from './About.module.css';
 
 const About = () => {
-    {/*
-        Fact: 1 in 3 Have Neurological, Psychiatric Problems Post-COVID
-        Quit any medicaments! This is your solution.
-    */}
     return (
         <section className={styles['container-about']}>
             <h1 className={styles['container-about-title']}>What's the purpose of relify?</h1>
