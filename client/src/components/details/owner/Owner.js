@@ -30,6 +30,7 @@ const Owner = ({
                         <Modal
                             updateModal={updateModal}
                             deleteHandler={deleteHandler}
+                            type="Slide"
                         />
                         :
                         <>

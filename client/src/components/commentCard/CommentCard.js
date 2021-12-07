@@ -41,6 +41,7 @@ const CommentCard = ({
                                     <Modal
                                         updateModal={updateModal}
                                         deleteHandler={deleteHandler}
+                                        type="Thumb"
                                     />
                                     :
                                     <>
