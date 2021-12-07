@@ -18,7 +18,7 @@ const MyLikes = () => {
     useEffect(() => {
         (async () => {
             const storyIds = await likeService.getUserLikedStoriesIds(authApi.getUserId()).catch(err => console.error(err));
-            const likedStories = await storyService.getUserLikedStories(Object.values(storyIds).map(x => `"${x.storyId}"`)).catch(err => console.error(err));
+            const likedStories = await storyService.getStoriesByIds(Object.values(storyIds).map(x => `"${x.storyId}"`)).catch(err => console.error(err));
             setLikedStories(likedStories);
         })();
     }, [])

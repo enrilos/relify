@@ -26,8 +26,7 @@ async function getByTitle(title) {
     return await jsonRequest(`${baseUrl}?where=title%20LIKE%20%22${title}%22&sortBy=_createdOn%20desc`);
 }
 
-// Change the name of this function to a more abstract one?
-async function getUserLikedStories(joinedStoryIds) {
+async function getStoriesByIds(joinedStoryIds) {
     // Mandatory due to the fact that should there be no liked stories by the user, the request throws and error.
     if (joinedStoryIds.length === 0) {
         return [];
@@ -55,7 +54,7 @@ const storyService = {
     getUserStoriesByTitle,
     get,
     getByTitle,
-    getUserLikedStories,
+    getStoriesByIds,
     create,
     edit,
     deleteStory
