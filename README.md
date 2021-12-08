@@ -3,7 +3,7 @@ Blog system built as a defense project for <a href="https://softuni.bg/trainings
 
 # 😌 relify
 
-Relax yourself with relify - the relief app.
+Relax yourself with relify - the relief app. <a href="https://enrilos.github.io/relify/">https://enrilos.github.io/relify/</a>
 
 # 📄 Abstract
 
