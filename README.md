@@ -11,13 +11,22 @@ Have you been feeling anxious lately? During difficult periods, such as pandemic
 
 # 🔨 Built With
 - React
+- Client-side rendering
 - React Functional Components
 - React Hooks
-- React Router v6
+- React Router v6 for client-side routing
 - React Context API
 - JavaScript
+- Authentication
 - AJAX
+- REST API
 - CSS Modules
+- Error Handling & Data Validation
+- Bound Forms
+- Synthetic Events
+- Stateless and Stateful Components
+- Debouncer
+- Route Guards
 - HTML5
 - CSS3
 
