@@ -3,7 +3,9 @@ import styles from '../Header.module.css';
 
 const User = ({
     setActiveRegular,
-    setActiveAuth
+    setActiveAuth,
+    setActiveUser,
+    email
 }) => {
     return (
         <>
@@ -16,6 +18,7 @@ const User = ({
                 <li><NavLink to="/contact" className={setActiveRegular}>Contact</NavLink></li>
             </ul>
             <ul className={styles['menu-auth']}>
+                <li className={setActiveUser}>{email}</li>
                 <li><NavLink to="/logout" className={setActiveAuth}>Logout</NavLink></li>
             </ul>
         </>

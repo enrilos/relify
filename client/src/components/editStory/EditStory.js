@@ -15,6 +15,9 @@ const EditStory = () => {
     const [isContentValid, setIsContentValid] = useState(true);
 
     useEffect(() => {
+        // TODO: After having deleted the story, any likes and comments that are connected with it must also be deleted.
+        // Note: DELETE http method deletes only a single entry, not array of likes/comments.
+        // Therefore, each like/comment id associated with this story must be deleted in a query separately.
         storyService.get(storyId).then(x => setStory(x)).catch(err => console.error(err));
     }, []);
 

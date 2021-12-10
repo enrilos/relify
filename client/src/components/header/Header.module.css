@@ -46,6 +46,12 @@
     color: white;
 }
 
+.menu-auth-user {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+
 .menu-regular-btn,
 .menu-regular-btn:hover,
 .menu-auth-btn,

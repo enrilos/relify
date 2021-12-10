@@ -9,6 +9,7 @@ const Header = ({
 
     const setActiveRegular = ({ isActive }) => isActive ? styles['active-link'] : styles['menu-regular-btn'];
     const setActiveAuth = ({ isActive }) => isActive ? styles['active-link'] : styles['menu-auth-btn'];
+    const setActiveUser = styles['menu-auth-user'];
 
     return (
         <header className={styles['container-header']}>
@@ -21,6 +22,8 @@ const Header = ({
                     <User
                         setActiveRegular={setActiveRegular}
                         setActiveAuth={setActiveAuth}
+                        setActiveUser={setActiveUser}
+                        email={email}
                     />
                     :
                     <Guest
