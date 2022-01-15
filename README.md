@@ -1,13 +1,5 @@
-# relify
-Blog system built as a defense project for <a href="https://softuni.bg/trainings/3575/reactjs-november-2021">ReactJS</a> course at Software University.
-
 # 😌 relify
-
-Relax yourself with relify - the relief app.
-<br />
-Firebase Hosting: <a href="https://relify-project.web.app/">https://relify-project.web.app/</a>
-<br />
-Github Pages: <a href="https://enrilos.github.io/relify/">https://enrilos.github.io/relify/</a>
+Blog system built as a defense project for <a href="https://softuni.bg/trainings/3575/reactjs-november-2021">ReactJS</a> course at Software University.
 
 # 📄 Abstract
 
